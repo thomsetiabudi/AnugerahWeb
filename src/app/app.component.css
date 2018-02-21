@@ -1,0 +1,37 @@
+/* Logo GKMI Anugerah */
+#logoAnugerah {
+    display: block;
+    max-width:230px;
+    max-height:95px;
+    width: auto;
+    height: auto;
+}
+
+/* Text Line Height */
+.cu-lh-1p6 {
+    line-height: 1.6;
+}
+
+.cu-main-text-footer {
+    height: 30%;
+}
+
+.cu-mt-main-logo {
+    margin-top: -200px;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+    .cu-main-text-footer {
+        height: 25%;
+    }
+
+    .cu-mt-main-logo {
+        margin-top: 0px;
+    }
+    
+}
+
+.cu-fs-sm {
+    font-size: small;
+}
