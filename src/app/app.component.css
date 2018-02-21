@@ -12,22 +12,15 @@
     line-height: 1.6;
 }
 
-.cu-main-text-footer {
-    height: 30%;
-}
-
-.cu-mt-main-logo {
-    margin-top: -200px;
+.cu-h-90 {
+    height: 90%;
 }
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { 
-    .cu-main-text-footer {
-        height: 25%;
-    }
 
-    .cu-mt-main-logo {
-        margin-top: 0px;
+    .cu-h-90 {
+        height: 100%;
     }
     
 }
