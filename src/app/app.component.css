@@ -1,15 +1,10 @@
-/* Logo GKMI Anugerah */
-#logoAnugerah {
-    display: block;
-    max-width:230px;
-    max-height:95px;
-    width: auto;
-    height: auto;
-}
-
 /* Text Line Height */
 .cu-lh-1p6 {
     line-height: 1.6;
+}
+
+.cu-cur-pointer {
+    cursor: pointer;
 }
 
 .cu-h-90 {

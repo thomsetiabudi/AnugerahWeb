@@ -11,11 +11,13 @@ import { AppComponent } from './app.component';
 import { MDBSpinningPreloader } from './typescripts/pro/index';
 import { AppRoutingModule } from './/app-routing.module';
 import { KisahComponent } from './kisah/kisah.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    KisahComponent
+    KisahComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -33,6 +35,6 @@ import { KisahComponent } from './kisah/kisah.component';
   ],
   providers: [MDBSpinningPreloader],
   bootstrap: [AppComponent],
-  schemas:      [ NO_ERRORS_SCHEMA ]
+  schemas: [NO_ERRORS_SCHEMA]
 })
 export class AppModule { }
