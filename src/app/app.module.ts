@@ -10,10 +10,12 @@ import { AgmCoreModule } from '@agm/core';
 import { AppComponent } from './app.component';
 import { MDBSpinningPreloader } from './typescripts/pro/index';
 import { AppRoutingModule } from './/app-routing.module';
+import { KisahComponent } from './kisah/kisah.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    KisahComponent
   ],
   imports: [
     BrowserModule,
