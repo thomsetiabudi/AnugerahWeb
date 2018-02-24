@@ -28,3 +28,14 @@
 .cu-fs-sm {
     font-size: small;
 }
+
+.cu-hoverable:hover {
+    color: white;
+    font-weight: bold;
+    background-color: lightgray;
+    -o-transition:background-color .5s ease-in, color .2s ease-in, font-weight .4s ease-in;
+    -ms-transition:background-color .5s ease-in, color .2s ease-in, font-weight .4s ease-in;
+    -moz-transition:background-color .5s ease-in, color .2s ease-in, font-weight .4s ease-in;
+    -webkit-transition:background-color .5s ease-in, color .2s ease-in, font-weight .4s ease-in;
+    transition:background-color .5s ease-in, color .2s ease-in, font-weight .4s ease-in;
+}

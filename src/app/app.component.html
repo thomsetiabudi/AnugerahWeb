@@ -1,4 +1,9 @@
 <!-- Start your project here-->
+<!--<nav>
+    <a routerLink="/home">Heroes</a>
+</nav>-->
+<router-outlet></router-outlet>
+<app-messages></app-messages>
 <!--Main Navigation-->
 <header>
 
@@ -16,7 +21,7 @@
             <!--Small Logo Column-->
             <div class="col-md-1 col-12 mt-3 mt-md-5">
                 <!--Small Logo image -->
-                <img id="logoAnugerah" src="/assets/logo-sm-bw.png" class="img-fluid wow rollIn hoverable" data-wow-delay="0.3s" alt="Logo GKMI Anugerah">
+                <img id="logoAnugerah" src="/assets/logo-sm-bw.png" class="img-fluid wow fadeIn" data-wow-delay="0.3s" alt="Logo GKMI Anugerah">
                 <!--/Small Logo image -->
             </div>
             <!--/Small Logo Column-->
@@ -24,22 +29,22 @@
             <!--Main Left Grid column-->
             <div class="col-md-6 col-12 mt-md-5 cu-mt-main-logo cu-h-90 h-md-100 d-flex flex-column">
                 <!--Logo image -->
-                <img id="logoAnugerah" src="/assets/logoAnugerah.png" class="img-fluid wow rollIn" data-wow-delay="0.3s" alt="Logo GKMI Anugerah">
+                <img id="logoAnugerah" src="/assets/logoAnugerah.png" class="img-fluid wow fadeIn" data-wow-delay="0.3s" alt="Logo GKMI Anugerah">
                 <!--/Logo image -->
 
                 <!--Main Text Content-->
                 <div>
-                    <div class="mt-5 cu-lh-1p6 wow rollIn" data-wow-delay="0.3s">
+                    <div class="mt-5 cu-lh-1p6 wow slideInDown" data-wow-delay="0.3s">
                         IBADAH MINGGU
                         <br> 14 Januari 2018
                     </div>
 
-                    <div class="mt-3 cu-lh-1p6 wow rollIn" data-wow-delay="0.3s">
+                    <div class="mt-3 cu-lh-1p6 wow slideInDown" data-wow-delay="0.1s">
                         <span class="h3">07:30</span>
                         <br>
                         <span class="small">(Sunday service, anugerah kids, anugerah teens)</span>
                     </div>
-                    <div class="mt-2 cu-lh-1p6 wow rollIn" data-wow-delay="0.3s">
+                    <div class="mt-2 cu-lh-1p6 wow slideInDown" data-wow-delay="0.2s">
                         <span class="h3">10:00</span>
                         <br>
                         <span class="small">(anugerah youth)</span>
@@ -48,7 +53,7 @@
                 <!--/Main Text Content-->
 
                 <!--Main Text Footer-->
-                <div class="mt-auto cu-main-text-footer wow rollIn" data-wow-delay="0.3s">
+                <div class="mt-auto cu-main-text-footer wow fadeIn" data-wow-delay="0.3s">
                     <div class="small mb-5">
                         <span id="mainClockTime"></span>
                     </div>
@@ -60,19 +65,19 @@
             <!--Main Right Grid column-->
             <div class="col-md-5 h-100 d-none d-md-block">
                 <div class="row h-50 hidden-md-down">
-                    <div class="col-md-6 border border-top-0 d-flex">
-                        <span class="align-self-end mb-4 wow rollIn" data-wow-delay="0.3s">K I S A H &nbsp; K A M I</span>
+                    <div class="col-md-6 border border-top-0 d-flex cu-hoverable">
+                        <span class="align-self-end mb-4 wow fadeIn" data-wow-delay="0.3s">K I S A H &nbsp; K A M I</span>
                     </div>
-                    <div class="col-md-6 border border-top-0 d-flex">
-                        <span class="align-self-end mb-4 wow rollIn" data-wow-delay="0.3s">K O M U N I T A S</span>
+                    <div class="col-md-6 border border-top-0 d-flex cu-hoverable">
+                        <span class="align-self-end mb-4 wow fadeIn" data-wow-delay="0.3s">K O M U N I T A S</span>
                     </div>
                 </div>
                 <div class="row h-50 hidden-md-down">
-                    <div class="col-md-6 border border-bottom-0 d-flex">
-                        <span class="align-self-end mb-4 wow rollIn" data-wow-delay="0.3s">A K T I V I T A S</span>
+                    <div class="col-md-6 border border-bottom-0 d-flex cu-hoverable">
+                        <span class="align-self-end mb-4 wow fadeIn" data-wow-delay="0.3s">A K T I V I T A S</span>
                     </div>
-                    <div class="col-md-6 border border-bottom-0 d-flex flex-column cu-fs-sm">
-                        <div class="mt-4 wow rollIn d-flex flex-column" data-wow-delay="0.3s">
+                    <div class="col-md-6 border border-bottom-0 d-flex flex-column cu-fs-sm cu-hoverable">
+                        <div class="mt-4 wow fadeIn d-flex flex-column" data-wow-delay="0.3s">
                             <span class="small">Jam Kerja</span>
                             <div class="d-flex justify-content-end">
                                 <span class="mr-auto small text-muted">Selasa-Sabtu</span>
@@ -123,23 +128,23 @@
         <div class="row d-md-none">
             <div class="col-12 border border-dark">
                 <div class="mt-4 d-flex flex-column">
-                    <span class="small wow rollIn">Jam Kerja</span>
-                    <div class="d-flex justify-content-end wow rollIn">
+                    <span class="small wow fadeIn">Jam Kerja</span>
+                    <div class="d-flex justify-content-end wow fadeIn">
                         <span class="mr-auto small text-muted">Selasa-Sabtu</span>
                         <span class="small">09:00-17:00</span>
                     </div>
-                    <div class="d-flex justify-content-end wow rollIn" data-wow-delay="0.1s">
+                    <div class="d-flex justify-content-end wow fadeIn" data-wow-delay="0.1s">
                         <span class="mr-auto small text-muted">Minggu</span>
                         <span class="small">07:00-12:00</span>
                     </div>
 
-                    <div class="d-flex justify-content-end mt-4 wow rollIn" data-wow-delay="0.1s">
+                    <div class="d-flex justify-content-end mt-4 wow fadeIn" data-wow-delay="0.1s">
                         <span class="mr-auto small text-muted">(021) - 3844777</span>
                     </div>
-                    <div class="d-flex justify-content-end wow rollIn" data-wow-delay="0.1s">
+                    <div class="d-flex justify-content-end wow fadeIn" data-wow-delay="0.1s">
                         <span class="mr-auto small text-muted">elroianugerah@gmail.com</span>
                     </div>
-                    <div class="mt-4 small wow rollIn" data-wow-delay="0.1s">
+                    <div class="mt-4 small wow fadeIn" data-wow-delay="0.1s">
                         GKMI Anugerah Jakarta
                         <br> Wisma Anugerah
                         <br> Jl. Taman Tanah Abang III/2

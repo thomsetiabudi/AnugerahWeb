@@ -9,6 +9,7 @@ import { MDBBootstrapModulePro } from './typescripts/pro/index';
 import { AgmCoreModule } from '@agm/core';
 import { AppComponent } from './app.component';
 import { MDBSpinningPreloader } from './typescripts/pro/index';
+import { AppRoutingModule } from './/app-routing.module';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { MDBSpinningPreloader } from './typescripts/pro/index';
     AgmCoreModule.forRoot({
       // https://developers.google.com/maps/documentation/javascript/get-api-key?hl=en#key
       apiKey: 'Your_api_key'
-    })
+    }),
+    AppRoutingModule
   ],
   providers: [MDBSpinningPreloader],
   bootstrap: [AppComponent],
