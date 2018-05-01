@@ -9,6 +9,8 @@ import { MDBBootstrapModulePro } from './typescripts/pro/index';
 import { AgmCoreModule } from '@agm/core';
 import { AppComponent } from './app.component';
 import { MDBSpinningPreloader } from './typescripts/pro/index';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 import { AppRoutingModule } from './/app-routing.module';
 import { KisahComponent } from './kisah/kisah.component';
 import { HomeComponent } from './home/home.component';
@@ -41,7 +43,8 @@ import { TeensComponent } from './teens/teens.component';
       // https://developers.google.com/maps/documentation/javascript/get-api-key?hl=en#key
       apiKey: 'Your_api_key'
     }),
-    AppRoutingModule
+    AppRoutingModule,
+    ServiceWorkerModule.register('/ngsw-worker.js', {enabled: environment.production})
   ],
   providers: [MDBSpinningPreloader],
   bootstrap: [AppComponent],
