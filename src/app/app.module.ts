@@ -14,6 +14,9 @@ import { KisahComponent } from './kisah/kisah.component';
 import { HomeComponent } from './home/home.component';
 import { SejarahComponent } from './sejarah/sejarah.component';
 import { GembalaComponent } from './gembala/gembala.component';
+import { KomunitasComponent } from './komunitas/komunitas.component';
+import { AktivitasComponent } from './aktivitas/aktivitas.component';
+import { TeensComponent } from './teens/teens.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { GembalaComponent } from './gembala/gembala.component';
     KisahComponent,
     HomeComponent,
     SejarahComponent,
-    GembalaComponent
+    GembalaComponent,
+    KomunitasComponent,
+    AktivitasComponent,
+    TeensComponent
   ],
   imports: [
     BrowserModule,

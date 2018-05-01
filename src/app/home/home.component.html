@@ -6,7 +6,7 @@
 <!--/Main Navigation-->
 
 <!--Main layout-->
-<main style="height:92vh;">
+<main style="height:100vh;">
     <!--Main container-->
     <div class="container h-100">
 
@@ -22,7 +22,7 @@
             <!--/Small Logo Column-->
 
             <!--Main Left Grid column-->
-            <div class="col-md-6 col-12 mt-md-5 cu-mt-main-logo cu-h-90 h-md-100 d-flex flex-column">
+            <div class="col-md-6 col-12 mt-md-5 cu-mt-main-logo cu-h-90 d-flex flex-column">
                 <!--Logo image -->
                 <img src="/assets/logoAnugerah.png" class="img-fluid wow fadeIn cu-logo" data-wow-delay="0.3s" alt="Logo GKMI Anugerah">
                 <!--/Logo image -->
@@ -63,15 +63,15 @@
                     <div routerLink='/kisah' class="col-md-6 border border-top-0 d-flex cu-hoverable cu-cur-pointer">
                         <span routerLink='/kisah' class="align-self-end mb-4 wow fadeIn" data-wow-delay="0.3s">K I S A H &nbsp; K A M I</span>
                     </div>
-                    <div class="col-md-6 border border-top-0 d-flex cu-hoverable  cu-cur-pointer">
-                        <span class="align-self-end mb-4 wow fadeIn" data-wow-delay="0.3s">K O M U N I T A S</span>
+                    <div routerLink='/komunitas' class="col-md-6 border border-top-0 d-flex cu-hoverable cu-cur-pointer">
+                        <span routerLink='/komunitas' class="align-self-end mb-4 wow fadeIn" data-wow-delay="0.3s">K O M U N I T A S</span>
                     </div>
                 </div>
                 <div class="row h-50 hidden-md-down">
-                    <div class="col-md-6 border border-bottom-0 d-flex cu-hoverable  cu-cur-pointer">
-                        <span class="align-self-end mb-4 wow fadeIn" data-wow-delay="0.3s">A K T I V I T A S</span>
+                    <div routerLink='/aktivitas' class="col-md-6 border border-bottom-0 d-flex cu-hoverable cu-cur-pointer">
+                        <span routerLink='/aktivitas' class="align-self-end mb-4 wow fadeIn" data-wow-delay="0.3s">A K T I V I T A S</span>
                     </div>
-                    <div class="col-md-6 border border-bottom-0 d-flex flex-column cu-fs-sm cu-hoverable">
+                    <div class="col-md-6 border border-bottom-0 d-flex flex-column cu-fs-sm">
                         <div class="mt-4 wow fadeIn d-flex flex-column" data-wow-delay="0.3s">
                             <span class="small">Jam Kerja</span>
                             <div class="d-flex justify-content-end">
@@ -106,18 +106,18 @@
 
         <!--Mobile Grid row-->
         <div class="row d-md-none">
-            <div class="col-12 d-flex justify-content-left border border-dark">
+            <div routerLink='/kisah' class="col-12 d-flex justify-content-left border border-dark">
                 <span routerLink='/kisah' class="cu-hoverable cu-cur-pointer">K I S A H &nbsp; K A M I</span>
             </div>
         </div>
         <div class="row d-md-none">
-            <div class="col-12 d-flex justify-content-left border border-dark">
-                <span class="cu-hoverable cu-cur-pointer">K O M U N I T A S</span>
+            <div routerLink='/komunitas' class="col-12 d-flex justify-content-left border border-dark">
+                <span routerLink='/komunitas' class="cu-hoverable cu-cur-pointer">K O M U N I T A S</span>
             </div>
         </div>
         <div class="row d-md-none">
-            <div class="col-12 d-flex justify-content-left border border-dark">
-                <span class="cu-hoverable cu-cur-pointer">A K T I V I T A S</span>
+            <div routerLink='/aktivitas' class="col-12 d-flex justify-content-left border border-dark">
+                <span routerLink='/aktivitas' class="cu-hoverable cu-cur-pointer">A K T I V I T A S</span>
             </div>
         </div>
         <div class="row d-md-none">
@@ -153,6 +153,13 @@
 
     </div>
     <!--/Main container-->
+    <!-- <div class="background-div" id="main-container">
+        <img data-depth="1" src="/assets/backgrounds/clouds_BG.png" class="cu-full-image">
+        <img data-depth="0.8" src="/assets/backgrounds/clouds_MG_3.png" class="cu-full-image">
+        <img data-depth="0.6" src="/assets/backgrounds/clouds_MG_2.png" class="cu-full-image">
+        <img data-depth="0.4" src="/assets/backgrounds/clouds_MG_1.png" class="cu-full-image">
+        <img data-friction-x="0.1" data-depth="0.2" src="/assets/backgrounds/cloud_lonely.png" class="cu-full-image">
+    </div> -->
 </main>
 <!--/Main layout-->
 

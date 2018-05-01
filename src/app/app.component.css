@@ -15,7 +15,7 @@
 @media (min-width: 576px) { 
 
     .cu-h-90 {
-        height: 100%;
+        height: 90%;
     }
     
 }
@@ -37,7 +37,7 @@
 
 .cu-vertical-text {
     transform: rotate(270deg);
-    width: 150px;
+    width: 180px;
 }
 
 /* Logo */

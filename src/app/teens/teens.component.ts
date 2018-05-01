@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-gembala',
-  templateUrl: './gembala.component.html',
+  selector: 'app-teens',
+  templateUrl: './teens.component.html',
   styleUrls: [
-    './gembala.component.scss',
-    './gembala.component.css',
+    './teens.component.scss',
+    './teens.component.css',
     '../app.component.css'
   ]
 })
-export class GembalaComponent implements OnInit {
+export class TeensComponent implements OnInit {
 
   constructor() { }
 

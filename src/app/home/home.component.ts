@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterContentInit } from '@angular/core';
+// import * as Parallax from 'parallax-js';
+
+// declare var Parallax: any;
 
 @Component({
   selector: 'app-home',
@@ -10,7 +13,7 @@ import { Component, OnInit } from '@angular/core';
   ]
 })
 
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, AfterContentInit {
 
   constructor() { }
 
@@ -18,6 +21,13 @@ export class HomeComponent implements OnInit {
     startTime();
   }
 
+  ngAfterContentInit() {
+    // const scene = document.getElementById("main-container");
+    // new Parallax(scene, {
+    //   relativeInput: true,
+    //   hoverOnly: true
+    // });
+  }
 }
 
 var weekday = new Array(7);
