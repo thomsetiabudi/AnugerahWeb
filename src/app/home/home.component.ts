@@ -18,6 +18,7 @@ export class HomeComponent implements OnInit, AfterContentInit {
   constructor() { }
 
   ngOnInit() {
+    window.scrollTo(0, 0);
     startTime();
   }
 
