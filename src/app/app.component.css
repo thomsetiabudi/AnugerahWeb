@@ -34,3 +34,16 @@
     -webkit-transition:background-color .5s ease-in, color .2s ease-in, font-weight .4s ease-in;
     transition:background-color .5s ease-in, color .2s ease-in, font-weight .4s ease-in;
 }
+
+.cu-vertical-text {
+    transform: rotate(90deg);
+}
+
+/* Logo GKMI Anugerah */
+#logoAnugerah {
+    display: block;
+    max-width:230px;
+    max-height:95px;
+    width: auto;
+    height: auto;
+}
