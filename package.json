@@ -10,7 +10,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "aot:build": "ng build --prod --sm=false --aot=true --output-path=dist",
-    "pre-commit": "ng lint"
+    "pre-commit": "ng lint",
+	"productionbuild": "ng build --prod --build-optimizer"
   },
   "private": true,
   "dependencies": {
