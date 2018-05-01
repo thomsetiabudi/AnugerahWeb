@@ -36,14 +36,21 @@
 }
 
 .cu-vertical-text {
-    transform: rotate(90deg);
+    transform: rotate(270deg);
+    width: 150px;
 }
 
-/* Logo GKMI Anugerah */
-#logoAnugerah {
+/* Logo */
+.cu-logo {
     display: block;
     max-width:230px;
     max-height:95px;
     width: auto;
     height: auto;
+}
+
+.cu-logo-small {
+    display: block;
+    width: 50px;
+    height: 56px;
 }
