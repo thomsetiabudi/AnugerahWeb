@@ -12,12 +12,16 @@ import { MDBSpinningPreloader } from './typescripts/pro/index';
 import { AppRoutingModule } from './/app-routing.module';
 import { KisahComponent } from './kisah/kisah.component';
 import { HomeComponent } from './home/home.component';
+import { SejarahComponent } from './sejarah/sejarah.component';
+import { GembalaComponent } from './gembala/gembala.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     KisahComponent,
-    HomeComponent
+    HomeComponent,
+    SejarahComponent,
+    GembalaComponent
   ],
   imports: [
     BrowserModule,
