@@ -17,7 +17,7 @@ import { HomeComponent } from './home/home.component';
 import { SejarahComponent } from './sejarah/sejarah.component';
 import { GembalaComponent } from './gembala/gembala.component';
 import { KomunitasComponent } from './komunitas/komunitas.component';
-import { AktivitasComponent } from './aktivitas/aktivitas.component';
+import { PersekutuanComponent } from './persekutuan/persekutuan.component';
 import { TeensComponent } from './teens/teens.component';
 
 @NgModule({
@@ -28,7 +28,7 @@ import { TeensComponent } from './teens/teens.component';
     SejarahComponent,
     GembalaComponent,
     KomunitasComponent,
-    AktivitasComponent,
+    PersekutuanComponent,
     TeensComponent
   ],
   imports: [

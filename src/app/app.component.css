@@ -8,20 +8,24 @@
 }
 
 .cu-h-90 {
-    height: 90%;
+    height: 100%;
 }
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { 
 
     .cu-h-90 {
-        height: 90%;
+        height: 100%;
     }
     
 }
 
+.cu-title-letter-spacing {
+    letter-spacing: 3px;
+}
+
 .cu-fs-sm {
-    font-size: small;
+    font-size: 10pt;
 }
 
 .cu-hoverable:hover {

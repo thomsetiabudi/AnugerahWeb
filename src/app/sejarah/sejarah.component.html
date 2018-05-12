@@ -14,12 +14,12 @@
     <div class="row h-100">
 
       <!--Small Logo Column-->
-      <div class="col-md-1 col-12 mt-3 mt-md-5 d-flex flex-column justify-content-between">
+      <div class="col-md-1 col-12 pt-2 pt-md-4 hidden-md-down d-flex flex-column justify-content-between">
         <!--Small Logo image -->
         <img routerLink='/' src="/assets/logo-sm-bw.png" class="img-fluid wow fadeIn cu-logo-small" data-wow-delay="0.3s" alt="Logo GKMI Anugerah">
         <!--/Small Logo image -->
 
-        <div class="cu-vertical-text align-self-center hidden-md-down">K I S A H &nbsp; K A M I</div>
+        <div class="cu-vertical-text align-self-center hidden-md-down cu-title-letter-spacing">KISAH KAMI</div>
 
         <!-- Dummy Div Necessary to make second div vertically centered -->
         <div></div>
@@ -28,7 +28,11 @@
       <!--/Small Logo Column-->
 
       <!--Main Left Grid column-->
-      <div class="col-md-6 col-12 mt-md-5 cu-mt-main-logo cu-h-90 d-flex flex-column">
+      <div class="col-md-6 col-12 pt-2 pt-md-4 cu-mt-main-logo cu-h-90 d-flex flex-column">
+        <!--Small Logo image on small device -->
+        <img routerLink='/' src="/assets/logo-sm-bw.png" class="img-fluid wow fadeIn cu-logo-small d-md-none" data-wow-delay="0.3s" alt="Logo GKMI Anugerah">
+        <!--/Small Logo image on small device -->
+        
         <!--Logo image -->
         <img routerLink='/' src="/assets/logoAnugerah.png" class="img-fluid wow fadeIn cu-logo" data-wow-delay="0.3s" alt="Logo GKMI Anugerah">
         <!--/Logo image -->
@@ -48,7 +52,7 @@
         <!--/Main Text Content-->
 
         <!--Main Text Footer-->
-        <div class="mt-auto cu-main-text-footer wow fadeIn" data-wow-delay="0.3s">
+        <div class="mt-auto cu-main-text-footer wow fadeIn d-none" data-wow-delay="0.3s">
           <div class="small mb-5">
             <span id="mainClockTime"></span>
           </div>
@@ -59,9 +63,9 @@
 
       <!--Main Right Grid column-->
       <div class="col-md-5 p-0 d-flex flex-column justify-content-center border border-bottom-0">
-        <div class="border border-right-0 border-left-0 cu-subsection-link-box text-muted">S E J A R A H</div>
-        <div routerLink='/kisah' class="border border-right-0 border-left-0 cu-hoverable cu-cur-pointer cu-subsection-link-box">V I S I - M I S I</div>
-        <div routerLink='/kisah/gembala' class="border border-right-0 border-left-0 cu-hoverable cu-cur-pointer cu-subsection-link-box">G E M B A L A &nbsp; K A M I</div>
+        <div class="border border-right-0 border-left-0 cu-subsection-link-box text-muted cu-title-letter-spacing">SEJARAH</div>
+        <div routerLink='/kisah' class="border border-right-0 border-left-0 cu-hoverable cu-cur-pointer cu-subsection-link-box cu-title-letter-spacing">VISI - MISI</div>
+        <div routerLink='/kisah/gembala' class="border border-right-0 border-left-0 cu-hoverable cu-cur-pointer cu-subsection-link-box cu-title-letter-spacing">GEMBALA KAMI</div>
       </div>
       <!--/Main Right Grid column-->
     </div>

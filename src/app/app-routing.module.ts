@@ -6,7 +6,7 @@ import { SejarahComponent } from './sejarah/sejarah.component';
 import { GembalaComponent } from './gembala/gembala.component';
 import { KomunitasComponent } from './komunitas/komunitas.component';
 import { TeensComponent } from './teens/teens.component';
-import { AktivitasComponent } from './aktivitas/aktivitas.component';
+import { PersekutuanComponent } from './persekutuan/persekutuan.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -16,7 +16,7 @@ const routes: Routes = [
   { path: 'kisah/gembala', component: GembalaComponent },
   { path: 'komunitas', component: KomunitasComponent },
   { path: 'komunitas/teens', component: TeensComponent },
-  { path: 'aktivitas', component: AktivitasComponent }
+  { path: 'persekutuan', component: PersekutuanComponent }
 ];
 
 @NgModule({

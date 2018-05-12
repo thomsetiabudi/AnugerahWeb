@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-aktivitas',
-  templateUrl: './aktivitas.component.html',
+  selector: 'app-persekutuan',
+  templateUrl: './persekutuan.component.html',
   styleUrls: [
-    './aktivitas.component.scss',
-    './aktivitas.component.css',
+    './persekutuan.component.scss',
+    './persekutuan.component.css',
     '../app.component.css'
   ]
 })
-export class AktivitasComponent implements OnInit {
+export class PersekutuanComponent implements OnInit {
 
   constructor() { }
 
