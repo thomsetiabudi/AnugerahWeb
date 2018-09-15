@@ -1,0 +1,91 @@
+// Variables
+
+// Colors
+
+$primaryBackgroundColor: rgba(19,41,75,1);
+
+body {
+    overflow: hidden !important;
+    background-color: $primaryBackgroundColor !important;
+}
+
+@media (max-width: 959px) {
+   
+    body {
+      margin: 0 !important;
+      padding: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+      overflow: hidden !important;
+    }
+  
+    .wrapper {
+      position: relative !important;
+      width: 100% !important;
+      height: 100% !important; 
+    }
+  
+}
+
+@media (min-width: 960px) and (max-width: 1440px) {
+   
+    body {
+      margin: 0 !important;
+      padding: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+      overflow: hidden !important;
+    }
+    
+}
+
+@media (max-width: 960px) {
+
+    html {
+      overflow: hidden;
+    }
+  
+  
+    .module-content-container {
+      overflow-y: scroll !important;
+      position: fixed;
+      top: 0;
+    }
+  
+  }
+
+@media (min-width: 960px) {
+
+    .module-content-container {
+      min-height: 100vh;
+    }
+  
+}
+
+.bg-vid-home {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+}
+
+.bg-vid-home {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bg-vid-home {
+    opacity: 1;
+    transition: opacity 1s;
+    z-index: 2;
+}
+
+.bg-vid-home.fade-out {
+    opacity: 0;
+}

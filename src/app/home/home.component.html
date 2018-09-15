@@ -1,3 +1,12 @@
-<p>
-  first page
-</p>
+<div class="wrapper">
+  <div class="module-content-container">
+    <video style="background: black;" class="bg-vid-home"
+      id="bgvidHome" playsinline="" muted="" (timeupdate)="videoTimeUpdate1()" #videoPlayer1>
+      <!-- <source type="video/mp4" src="http://nove.eu/wp-content/uploads/2017/10/Gettyimages-143-37-9-Sec-1.mp4"> -->
+    </video>
+    <video style="background: black;" class="bg-vid-home fade-out"
+      id="bgvidHome-2" playsinline="" muted="" (timeupdate)="videoTimeUpdate2()" #videoPlayer2>
+      <!-- <source type="video/mp4" src="http://nove.eu/wp-content/uploads/2017/10/Gettyimages-486301322-8-Sec-12.mp4"> -->
+    </video>
+  </div>
+</div>
