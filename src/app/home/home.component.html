@@ -1,12 +1,32 @@
 <div class="wrapper">
   <div class="module-content-container">
-    <video style="background: black;" class="bg-vid-home"
-      id="bgvidHome" playsinline="" muted="" (timeupdate)="videoTimeUpdate1()" #videoPlayer1>
-      <!-- <source type="video/mp4" src="http://nove.eu/wp-content/uploads/2017/10/Gettyimages-143-37-9-Sec-1.mp4"> -->
+    <video style="background: black;" class="bg-vid-home" id="bgvidHome" playsinline muted (timeupdate)="videoTimeUpdate1()"
+      #videoPlayer1>
     </video>
-    <video style="background: black;" class="bg-vid-home fade-out"
-      id="bgvidHome-2" playsinline="" muted="" (timeupdate)="videoTimeUpdate2()" #videoPlayer2>
-      <!-- <source type="video/mp4" src="http://nove.eu/wp-content/uploads/2017/10/Gettyimages-486301322-8-Sec-12.mp4"> -->
+    <video style="background: black;" class="bg-vid-home fade-out" id="bgvidHome-2" playsinline muted (timeupdate)="videoTimeUpdate2()"
+      #videoPlayer2>
     </video>
+    <div id="mainContent" style="min-height: 657px;">
+      <a href="#" id="logo" class="mainLogo">
+        <img src="/assets/logoAnugerah.png" class="cu-logo" alt="GKMI Anugerah">
+      </a>
+      <a href="#" id="logoicon" class="mainLogoIcon">
+        <img src="/assets/logo-sm-bw.png" class="cu-logo-small" alt="G">
+      </a>
+      <div id="verticalTitle" class="verticalText" style="margin-top: 0px;">
+        <p></p>
+      </div>
+      <div class="colLeft colHalf centerVertical largeTextBlock" id="homePage">
+          <!--Main Text Content-->
+          <div class="mainTextContent">
+            <h3>IBADAH MINGGU</h3>
+            <h1 style="margin-block-end: -0.25em;">07:30</h1>
+            <span>(Sunday service, anugerah kids)</span>
+            <h1 style="margin-block-end: -0.25em;">10:00</h1>
+            <span>(Sunday service)</span>
+          </div>
+          <!--/Main Text Content-->
+      </div>
+    </div>
   </div>
 </div>

@@ -50,7 +50,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
     const current = Math.round(videoPlayer.nativeElement.currentTime);
     const total = Math.round(videoPlayer.nativeElement.duration);
     const calc = total - current;
-    console.log(calc);
 
     if (calc < timeFromVideoEnd) {
       videoPlayer.nativeElement.className = 'bg-vid-home fade-out';
@@ -66,7 +65,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   appendVideoIndex() {
     videoIndex++;
 
-    if (videoIndex >= playlist.length){
+    if (videoIndex >= playlist.length) {
       videoIndex = 0;
     }
   }
