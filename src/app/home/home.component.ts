@@ -87,6 +87,25 @@ export class HomeComponent implements OnInit, AfterViewInit {
     }
     return array;
   }
+
+  startTime() {
+
+    const today = new Date();
+    const hh = today.getHours();
+    let mm = today.getMinutes();
+    const ddd = weekday[today.getDay()];
+    const dd = today.getDate();
+    const mmm = month[today.getMonth()];
+    mm = this.checkTime(mm);
+    document.getElementById('mainClockTime').innerHTML =
+      hh + ':' + mm + '<br>' + ddd + ', ' + dd + ' ' + mmm;
+    setTimeout(this.startTime, 1000);
+  }
+
+  checkTime(i) {
+    if (i < 10) { i = '0' + i; }  // add zero in front of numbers < 10
+    return i;
+  }
 }
 
 let videoIndex = 0;
@@ -108,3 +127,27 @@ playlist.push('http://nove.eu/wp-content/uploads/2017/10/Gettyimages-143-37-9-Se
 playlist.push('http://nove.eu/wp-content/uploads/2017/10/Gettyimages-145734322-9-Sec-2.mp4');
 playlist.push('http://nove.eu/wp-content/uploads/2017/10/Gettyimages-162392035-6-Sec-3.mp4');
 playlist.push('http://nove.eu/wp-content/uploads/2017/10/Gettyimages-168890703-9-Sec-4.mp4');
+
+// clock
+const weekday = new Array(7);
+weekday[0] = 'Minggu';
+weekday[1] = 'Senin';
+weekday[2] = 'Selasa';
+weekday[3] = 'Rabu';
+weekday[4] = 'Kamis';
+weekday[5] = 'Jumat';
+weekday[6] = 'Sabtu';
+
+const month = new Array(12);
+month[0] = 'Januari';
+month[1] = 'Februari';
+month[2] = 'Maret';
+month[3] = 'April';
+month[4] = 'Mei';
+month[5] = 'Juni';
+month[6] = 'Juli';
+month[7] = 'Agustus';
+month[8] = 'September';
+month[9] = 'Oktober';
+month[10] = 'November';
+month[11] = 'Desember';

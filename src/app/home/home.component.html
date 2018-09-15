@@ -1,9 +1,9 @@
 <div class="wrapper">
   <div class="module-content-container">
-    <video style="background: black;" class="bg-vid-home" id="bgvidHome" playsinline muted (timeupdate)="videoTimeUpdate1()"
+    <video style="background: black;" class="bg-vid-home" id="bgvidHome" muted autoplay (timeupdate)="videoTimeUpdate1()"
       #videoPlayer1>
     </video>
-    <video style="background: black;" class="bg-vid-home fade-out" id="bgvidHome-2" playsinline muted (timeupdate)="videoTimeUpdate2()"
+    <video style="background: black;" class="bg-vid-home fade-out" id="bgvidHome-2" muted (timeupdate)="videoTimeUpdate2()"
       #videoPlayer2>
     </video>
     <div id="mainContent" style="min-height: 657px;">
@@ -17,15 +17,37 @@
         <p></p>
       </div>
       <div class="colLeft colHalf centerVertical largeTextBlock" id="homePage">
-          <!--Main Text Content-->
-          <div class="mainTextContent">
-            <h3>IBADAH MINGGU</h3>
-            <h1 style="margin-block-end: -0.25em;">07:30</h1>
-            <span>(Sunday service, anugerah kids)</span>
-            <h1 style="margin-block-end: -0.25em;">10:00</h1>
-            <span>(Sunday service)</span>
+        <!--Main Text Content-->
+        <div class="mainTextContent">
+          <h3 class="serviceTitleLabel">IBADAH MINGGU</h3>
+          <h1 class="serviceHourLabel">07:30</h1>
+          <span>(Sunday service, anugerah kids)</span>
+          <h1 class="serviceHourLabel">10:00</h1>
+          <span>(Sunday service)</span>
+        </div>
+        <!--/Main Text Content-->
+      </div>
+      <div class="menuHome">
+        <a href="#" class="smBoxHome">
+          <div>
+            <p class="nav">KISAH KAMI</p>
           </div>
-          <!--/Main Text Content-->
+        </a>
+        <a href="#" class="smBoxHome">
+          <div>
+            <p class="nav">AKTIVITAS</p>
+          </div>
+        </a>
+        <a href="#" class="smBoxHome">
+          <div>
+            <p class="nav">KOMUNITAS</p>
+          </div>
+        </a>
+        <a href="#" class="smBoxHome">
+          <div>
+            <p class="nav">KANTOR</p>
+          </div>
+        </a>
       </div>
     </div>
   </div>
