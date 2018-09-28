@@ -46,3 +46,96 @@ body {
     opacity: 0.2;
     background-color: black;
 }
+
+#logo, #logoicon {
+    color: white;
+    z-index: 100;
+    position: absolute;
+}
+
+#logoicon {
+    z-index: 101;
+}
+
+.mainLogo {
+    top: 40px;
+    left: 7vw;
+    width: 160px;
+}
+
+.cu-logo {
+    display: block;
+    max-width:230px;
+    max-height:95px;
+    width: auto;
+    height: auto;
+}
+
+/* Adjust Logo on small device */
+@media (max-width: 960px) {
+    
+    .mainLogo {
+        top: 30px;
+        left: 7vw;
+        width: 160px;
+    }
+
+    .cu-logo {
+        display: block;
+        max-width:230px;
+        max-height:55px;
+        width: auto;
+        height: auto;
+    }
+}
+
+/* Adjust Logo on small device landscape */
+@media (max-width: 960px) and (max-height: 420px) {
+   
+    .mainLogo {
+        top: 20px;
+        left: 7vw;
+        width: 160px;
+    }
+    
+    .cu-logo {
+        display: block;
+        max-width:230px;
+        max-height:45px;
+        width: auto;
+        height: auto;
+    }
+}
+
+.mainLogoIcon {
+    top: 0px;
+    width: 7vw;
+    height: 120px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    transition: 0.5s opacity ease-in-out;
+    opacity: 1;
+}
+
+.mainLogoIcon img {
+    max-width: 35%;
+    margin: 0 auto;
+}
+
+/* Hide Small Logo on small device */
+@media (max-width: 960px) {
+   
+    .mainLogoIcon {
+      display: none;
+    }
+    
+}
+
+/* Adjust Logo on small device landscape */
+@media (max-width: 960px) and (max-height: 420px) {
+    .mainLogoIcon {
+        display: flex;
+        height: 55px;
+    }
+}
