@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist",
+    "public": "dist/anugerah-web",
 	"rewrites": [ 
 		{
 			"source": "**",
