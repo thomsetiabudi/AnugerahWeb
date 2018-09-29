@@ -360,12 +360,18 @@ ul, menu, dir {
         border-left: none;
         border-top: 1px solid rgba(255, 255, 255, 0.35);
     }
+
     .homeMenuLinkContainer > a:nth-child(2) {
         border-top: 1px solid rgba(255, 255, 255, 0.35);
+        border-right: none;
     }
 
     .homeMenuLinkContainer > a:nth-child(3) {
         border-left: none;
+    }
+
+    .homeMenuLinkContainer > a:last-child {
+        border-right: none;
     }
 
     .homeMenuLink {
@@ -391,15 +397,19 @@ ul, menu, dir {
 
     .homeMenuLink.homeMenuLinkKontak > div {
         position: static;
-        top: 2.4vw;
-        left: 2.4vw;
-        right: 2.4vw;
-        z-index: 35;
     }
 
     .socialIconButton {
-        max-width:45px;
-        max-height:45px;
+        max-width:35px;
+        max-height:35px;
+    }
+}
+
+/* Adjust Home Menu on small device landscape */
+@media (max-width: 960px) and (max-height: 420px) {
+    .socialIconButton {
+        max-width:25px;
+        max-height:25px;
     }
 }
 
