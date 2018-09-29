@@ -22,6 +22,10 @@ body {
     background-color: $primaryBackgroundColor !important;
 }
 
+a {
+    text-decoration: none !important;
+}
+
 .bg-img-home {
     opacity: 1;
     transition: opacity 2s;
@@ -43,8 +47,11 @@ body {
     opacity: 0;
 }
 .bg-img-home.screen {
-    opacity: 0.2;
-    background-color: black;
+    background-color: rgba(45, 45, 45, 0.3);
+}
+
+.logoAndMenu * {
+    transition: 0.5s ease-in-out all !important;
 }
 
 #logo, #logoicon {
@@ -138,4 +145,116 @@ body {
         display: flex;
         height: 55px;
     }
+}
+
+/* menuButton */
+.menuButton {
+    position: fixed;
+    z-index: 103;
+    top: 80px;
+    right: 0;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 12px !important;
+    letter-spacing: 2px;
+    width: 7% !important;
+    height: 16px;
+    color: white;
+}
+
+.menuButton > div {
+    height: 10px;
+    width: 10px;
+    margin-left: 0.35vw;
+    display: inline-block;
+}
+
+.menuButton > div span {
+    display: block;
+    position: absolute;
+    top: 8px;
+    width: 10px;
+    height: 1px;
+    margin-top: -1px;
+    background-color: white !important;
+}
+
+.menuButton > div span:first-child {
+    margin-top: -5px;
+}
+
+.menuButton > div span:last-child {
+    margin-top: 3px;
+}
+
+.menuButton.menuButtonOpen > div > span:first-child {
+    opacity: 1;
+    margin-top: -1px;
+    transform: rotate(45deg);
+}
+
+.menuButton.menuButtonOpen > div > span {
+    opacity: 0;
+}
+
+.menuButton.menuButtonOpen > div span:last-child {
+    opacity: 1;
+    margin-top: -1px;
+    transform: rotate(-45deg);
+}
+
+/* Adjust Menu Button on small device */
+@media (max-width: 960px) {
+    .menuButton {
+        top: 30px;
+        right: 5vw;
+        width: auto !important;
+        font-size: 11px !important;
+    }
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    transform: translateX(100%);
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 50;
+    transition: 0.5s ease-in-out;
+    -webkit-transition: all 650ms cubic-bezier(0.645, 0.045, 0.355, 1);
+    -moz-transition: all 650ms cubic-bezier(0.645, 0.045, 0.355, 1);
+    -o-transition: all 650ms cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 650ms cubic-bezier(0.645, 0.045, 0.355, 1);
+    -webkit-transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+    -moz-transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+    -o-transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition-delay: 0.75s;
+}
+
+nav:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #13294b;
+    opacity: 0.85;
+    display: block;
+    content: '';
+    z-index: 9;
+}
+
+.navMenuOpen nav {
+    width: 100%;
+    transform: translateX(0);
+    -webkit-transition: all 650ms cubic-bezier(0.645, 0.045, 0.355, 1);
+    -moz-transition: all 650ms cubic-bezier(0.645, 0.045, 0.355, 1);
+    -o-transition: all 650ms cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 650ms cubic-bezier(0.645, 0.045, 0.355, 1);
+    -webkit-transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+    -moz-transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+    -o-transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
 }

@@ -8,6 +8,8 @@ import { Component, OnInit, ViewChild, AfterViewInit, Renderer2 } from '@angular
 export class HomeComponent implements OnInit, AfterViewInit {
   @ViewChild('backgroundImage1') backgroundImage1: any;
   @ViewChild('backgroundImage2') backgroundImage2: any;
+  @ViewChild('menuButton') menuButton: any;
+  @ViewChild('logoAndMenuContainer') logoAndMenuContainer: any;
 
   constructor(private renderer: Renderer2) {  }
 
@@ -74,6 +76,16 @@ export class HomeComponent implements OnInit, AfterViewInit {
       array[randomIndex] = temporaryValue;
     }
     return array;
+  }
+
+  onMenuButtonClick() {
+    if (this.menuButton.nativeElement.className === 'menuButton menuButtonOpen') {
+      this.menuButton.nativeElement.className = 'menuButton';
+      this.logoAndMenuContainer.nativeElement.className = 'logoAndMenu';
+    } else {
+      this.menuButton.nativeElement.className = 'menuButton menuButtonOpen';
+      this.logoAndMenuContainer.nativeElement.className = 'logoAndMenu navMenuOpen';
+    }
   }
 }
 
