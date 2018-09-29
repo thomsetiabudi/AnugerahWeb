@@ -26,6 +26,16 @@ a {
     text-decoration: none !important;
 }
 
+ul, menu, dir {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
 .bg-img-home {
     opacity: 1;
     transition: opacity 2s;
@@ -278,13 +288,6 @@ nav #contact {
     transition-delay: 0.25s;
 }
 
-/* Adjust Contact on small device */
-@media (max-width: 960px) {
-    nav #contact {
-        display: none;
-    }
-}
-
 nav #contact > div {
     padding: 20px 0;
     display: block;
@@ -309,4 +312,103 @@ nav #contact > div p a {
 
 nav #contact > div p a:hover {
     opacity: 1;
+}
+
+/* Adjust Contact on small device */
+@media (max-width: 960px) {
+    nav #contact {
+        top: 80%;
+        transform: translateY(-20%);
+    }
+
+    nav #contact > div {
+        padding: 0px;
+    }
+
+    nav #contact > div p {
+        font-size: 10px;
+        margin-top: 2px;
+        margin-bottom: 2px;
+    }
+}
+
+/* Adjust Logo on small device landscape */
+@media (max-width: 960px) and (max-height: 420px) {
+    nav #contact {
+        top: 55%;
+        transform: translateY(-45%);
+    }
+
+    nav #contact > div {
+        padding: 20px 0;
+    }
+
+    nav #contact > div p {
+        font-size: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+/* Menu List */
+nav #menuListContainer {
+    position: absolute;
+    left: 0;
+    text-align: right;
+    z-index: 54;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 7vw;
+}
+
+nav #menuListContainer li {
+    list-style-type: none;
+    position: relative;
+    opacity: 0;
+    margin-right: -200px;
+    transition: 0.5s ease-in-out;
+}
+
+.navMenuOpen nav #menuListContainer li {
+    margin-right: 0;
+    opacity: 1;
+    transition: 0.5s ease-in-out;
+    transition-delay: 0.5s;
+}
+
+nav #menuListContainer li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 30px;
+    padding: 5px 0;
+    display: inline-block;
+    opacity: 0.6;
+    transition: 0.5s ease-in-out;
+    font-size: calc(0.24038vw + 22.15385px) !important;
+}
+
+nav #menuListContainer li a:hover {
+    opacity: 1;
+    transition: 0.0125s;
+}
+
+nav #menuListContainer li.currentMenuItem a {
+    pointer-events: none;
+    opacity: 1;
+}
+
+.menuListItem:after {
+    position: absolute;
+    top: 50%;
+    height: 1px;
+    background: white;
+    content: '';
+    right: -2vw;
+    width: 0vw;
+    transition: 0.25s ease-in-out;
+}
+
+.menuListItem.currentMenuItem:after {
+    right: -6vw;
+    width: 4vw;
 }
