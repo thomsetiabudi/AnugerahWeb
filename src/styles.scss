@@ -243,7 +243,7 @@ nav:after {
     opacity: 0.85;
     display: block;
     content: '';
-    z-index: 9;
+    z-index: 49;
 }
 
 .navMenuOpen nav {
@@ -257,4 +257,56 @@ nav:after {
     -moz-transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
     -o-transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
     transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.navMenuOpen nav #contact {
+    left: 4.8vw;
+    opacity: 1;
+    transition: 0.5s ease-in-out;
+    transition-delay: 0.43s;
+}
+
+nav #contact {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    z-index: 52;
+    opacity: 0;
+    left: 7vw !important;
+    transition: 0.5s ease-in-out;
+    transition-delay: 0.25s;
+}
+
+/* Adjust Contact on small device */
+@media (max-width: 960px) {
+    nav #contact {
+        display: none;
+    }
+}
+
+nav #contact > div {
+    padding: 20px 0;
+    display: block;
+}
+
+nav #contact > div p {
+    color: #fff;
+    letter-spacing: 1px;
+    line-height: 1.7em;
+    font-size: 15px;
+    letter-spacing: 0.75px;
+    line-height: 1.6em;
+    text-align: justify;
+    opacity: 0.7;
+}
+
+nav #contact > div p a {
+    color: #fff;
+    text-decoration: none;
+    opacity: 0.7;
+}
+
+nav #contact > div p a:hover {
+    opacity: 1;
 }
