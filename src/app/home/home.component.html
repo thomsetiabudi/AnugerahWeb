@@ -1,56 +1,53 @@
-<div class="wrapper">
-  <div class="module-content-container">
-    <!-- <video style="background: black;" class="bg-vid-home" id="bgvidHome" preload="auto" (timeupdate)="videoTimeUpdate1()" playsinline muted autoplay 
-      #videoPlayer1> -->
-    <!-- <video style="background: black;" class="bg-vid-home" id="bgvidHome" playsinline muted autoplay>
-      <source type="video/mp4" src="/assets/video/glow.mp4">
-    </video> -->
-    <!-- <video style="background: black;" class="bg-vid-home fade-out" id="bgvidHome-2" preload="auto" (timeupdate)="videoTimeUpdate2()" playsinline muted
-      #videoPlayer2>
-    </video> -->
-    <div id="mainContent" style="min-height: 657px;">
-      <a href="#" id="logo" class="mainLogo">
-        <img src="/assets/logoAnugerah.png" class="cu-logo" alt="GKMI Anugerah">
-      </a>
-      <a href="#" id="logoicon" class="mainLogoIcon">
-        <img src="/assets/logo-sm-bw.png" class="cu-logo-small" alt="G">
-      </a>
-      <div id="verticalTitle" class="verticalText" style="margin-top: 0px;">
-        <p></p>
+<div class="bg-img-home" #backgroundImage1>
+</div>
+<div class="bg-img-home fade-out" #backgroundImage2>
+</div>
+<div class="bg-img-home screen" #backgroundImageScreen>
+</div>
+<div class="logoAndMenu" #logoAndMenuContainer>
+  <a href="#" id="logo" class="mainLogo">
+    <img src="/assets/logoAnugerah.png" class="cu-logo" alt="GKMI Anugerah">
+  </a>
+  <a href="#" id="logoicon" class="mainLogoIcon">
+    <img src="/assets/logo-sm-bw.png" class="cu-logo-small" alt="G">
+  </a>
+  <a class="menuButton" (click)="onMenuButtonClick()" #menuButton>
+    Menu
+    <div>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </a>
+  <nav>
+    <div id="contact">
+      <div>
+        <p>GKMI Anugerah Jakarta<br>
+          Wisma Anugerah<br>
+          Jl. Taman Tanah Abang III/2<br>
+          10160 - Jakarta Pusat<br>
+          Indonesia</p>
       </div>
-      <div class="colLeft colHalf centerVertical largeTextBlock" id="homePage">
-        <!--Main Text Content-->
-        <div class="mainTextContent">
-          <h3 class="serviceTitleLabel">IBADAH MINGGU</h3>
-          <h1 class="serviceHourLabel">07:30</h1>
-          <span>(Sunday service, anugerah kids)</span>
-          <h1 class="serviceHourLabel">10:00</h1>
-          <span>(Sunday service)</span>
-        </div>
-        <!--/Main Text Content-->
-      </div>
-      <div class="menuHome">
-        <a href="#" class="smBoxHome">
-          <div>
-            <p class="nav">KISAH KAMI</p>
-          </div>
-        </a>
-        <a href="#" class="smBoxHome">
-          <div>
-            <p class="nav">AKTIVITAS</p>
-          </div>
-        </a>
-        <a href="#" class="smBoxHome">
-          <div>
-            <p class="nav">KOMUNITAS</p>
-          </div>
-        </a>
-        <a href="#" class="smBoxHome">
-          <div>
-            <p class="nav">KANTOR</p>
-          </div>
-        </a>
+      <div>
+        <p class="contactTel"><a href="tel:+62 21 3844 777">(021) 3844 777</a></p>
+        <p><a href="mailto:elroianugerah@gmail.com">elroianugerah@gmail.com</a></p>
       </div>
     </div>
-  </div>
+    <div id="menuListContainer">
+      <ul id="menuList" class="menuList">
+        <li class="menuListItem currentMenuItem">
+          <a href="/">Home</a>
+        </li>
+        <li class="menuListItem">
+          <a href="/">Kisah Kami</a>
+        </li>
+        <li class="menuListItem">
+          <a href="/">Komunitas</a>
+        </li>
+        <li class="menuListItem">
+          <a href="/">Persekutuan</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 </div>
