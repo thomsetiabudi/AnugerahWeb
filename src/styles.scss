@@ -14,7 +14,7 @@ $blackTransparent: rgba(255,255,255,0.35);
 }
 
 * {
-	font-family: 'montserratregular' !important;
+    font-family: 'montserratregular' !important;
 }
 
 *, *:after, *:before {
@@ -71,8 +71,6 @@ ul, menu, dir {
 
 .hideContent * {
     display: none !important;
-    transition: 3s ease-in-out;
-    transition-delay: 2s;
 }
 
 /* Content */
@@ -83,6 +81,7 @@ ul, menu, dir {
     transform: translateY(-50%) !important;
     z-index: 30;
     left: 7vw !important;
+    display: block;
 }
 
 .mainContentContainer > div p {
@@ -130,7 +129,7 @@ ul, menu, dir {
     }
 }
 
-/* Adjust Home Menu on super small device */
+/* Adjust Home Menu on super short device */
 @media (max-width: 960px) and (max-height: 650px) {
     .mainContentContainer {
         width: 50%;
@@ -174,6 +173,30 @@ ul, menu, dir {
         font-size: 10px;
         text-align: justify;
         margin-bottom: 10px;
+    }
+
+    .mainContentService {
+        font-size: 20px !important;
+    }
+
+    .mainContentServiceHour {
+        font-size: 25px;
+    }
+}
+
+/* Adjust Home Menu on super small device landscape */
+@media (max-width: 960px) and (max-height: 310px) {
+
+    .mainContentContainer > div > p {
+        margin-bottom: 5px;
+    }
+
+    .mainContentService {
+        font-size: 12px !important;
+    }
+
+    .mainContentServiceHour {
+        font-size: 17px;
     }
 }
 
@@ -237,6 +260,15 @@ ul, menu, dir {
     transition: 0.25s ease-in-out;
 }
 
+.homeMenuLink:last-child {
+    cursor: default;
+}
+
+.homeMenuLink:last-child:hover:after {
+    opacity: 0;
+    cursor: default;
+}
+
 .homeMenuLinkText {
     color: #fff;
     text-transform: uppercase;
@@ -249,6 +281,68 @@ ul, menu, dir {
 .homeMenuLink:hover .homeMenuLinkText {
     transform: translateY(-20px);
     transition: 0.25s ease-in-out;
+}
+
+.homeMenuLink.homeMenuLinkKontak > div {
+    position: absolute;
+    top: 2.4vw;
+    left: 2.4vw;
+    right: 2.4vw;
+    z-index: 35;
+}
+
+.homeMenuLinkTextKontak {
+    color: #fff;
+    letter-spacing: 3px;
+    font-size: 10px;
+    transform: translateY(0px);
+    transition: 0.25s ease-in-out;
+    line-height: 1.2em;
+    cursor: default !important;
+}
+
+.homeMenuLinkTextKontak > a {
+    color: #fff;
+    letter-spacing: 3px;
+    font-size: 12px;
+    transform: translateY(0px);
+    transition: 0.25s ease-in-out;
+    line-height: 1.2em;
+}
+
+.homeMenuLinkTextKontak {
+    margin-bottom: 15px;
+}
+
+.homeMenuLinkTextKontakJamKerjaDetail {
+    line-height: 1.6em;
+}
+
+.homeMenuLinkTextKontakJamKerjaDetailJam {
+    float: right;
+}
+
+.homeMenuLinkTextKontakTel {
+    margin-top: 30px;
+}
+
+.homeMenuLinkTextKontakDetail {
+    margin-top: 30px;
+    font-size: 10px;
+    line-height: 1.6em;
+}
+
+.socialIconButtonLink {
+    float: right;
+    margin-right: 5px;
+}
+
+.socialIconButton {
+    display: block;
+    max-width:25px;
+    max-height:25px;
+    width: auto;
+    height: auto;
 }
 
 /* Adjust Home Menu on small device */
@@ -285,6 +379,27 @@ ul, menu, dir {
         display: block;
         margin-left: 5vw;
         margin-right: 5vw;
+    }
+
+    .homeMenuLinkTextKontakJamKerjaTitle, .homeMenuLinkTextKontakJamKerjaDetail {
+        display: none;
+    }
+
+    .homeMenuLinkTextKontakDetail, .homeMenuLinkTextKontakTel, .homeMenuLinkTextKontakEMail {
+        display: none;
+    }
+
+    .homeMenuLink.homeMenuLinkKontak > div {
+        position: static;
+        top: 2.4vw;
+        left: 2.4vw;
+        right: 2.4vw;
+        z-index: 35;
+    }
+
+    .socialIconButton {
+        max-width:45px;
+        max-height:45px;
     }
 }
 
@@ -353,6 +468,24 @@ ul, menu, dir {
     }
 }
 
+/* Adjust Logo on super small device landscape */
+@media (max-width: 960px) and (max-height: 310px) {
+   
+    .mainLogo {
+        top: 20px;
+        left: 7vw;
+        width: 160px;
+    }
+    
+    .cu-logo {
+        display: block;
+        max-width:230px;
+        max-height:25px;
+        width: auto;
+        height: auto;
+    }
+}
+
 .mainLogoIcon {
     top: 0px;
     width: 7vw;
@@ -399,6 +532,7 @@ ul, menu, dir {
     width: 7% !important;
     height: 16px;
     color: white;
+    cursor: pointer;
 }
 
 .menuButton > div {
@@ -543,11 +677,24 @@ nav #contact > div p a:hover {
     opacity: 1;
 }
 
+.socialIconButtonLinkNav {
+    float: right;
+    margin-right: 5px;
+}
+
+.socialIconButtonNav {
+    display: block;
+    max-width:25px;
+    max-height:25px;
+    width: auto;
+    height: auto;
+}
+
 /* Adjust Contact on small device */
 @media (max-width: 960px) {
     nav #contact {
-        top: 80%;
-        transform: translateY(-20%);
+        top: 75%;
+        transform: translateY(-25%);
     }
 
     nav #contact > div {
@@ -569,13 +716,13 @@ nav #contact > div p a:hover {
     }
 
     nav #contact > div {
-        padding: 20px 0;
+        padding: 10px 0;
     }
 
     nav #contact > div p {
         font-size: 10px;
-        margin-top: 10px;
-        margin-bottom: 10px;
+        margin-top: 5px;
+        margin-bottom: 5px;
     }
 }
 
