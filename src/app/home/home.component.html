@@ -1,12 +1,5 @@
-<div class="bg-img-home" #backgroundImage1>
-</div>
-<div class="bg-img-home fade-out" #backgroundImage2>
-</div>
-<div class="bg-img-home screen" #backgroundImageScreen>
-</div>
-
 <!-- Content -->
-<div class="mainContentContainer" id="homePage">
+<div class="mainContentContainer" id="homePage" #mainContentContainer>
   <div>
     <p class="mainContentService">Ibadah Minggu</p>
     <p><span class="mainContentServiceHour">07:30</span><br>
@@ -20,7 +13,7 @@
 </div>
 
 <!-- Home Menu Links -->
-<div class="homeMenuLinkContainer">
+<div class="homeMenuLinkContainer" #homeMenuLinkContainer>
   <a href="/" class="homeMenuLink">
     <div>
       <p class="homeMenuLinkText">Kisah Kami</p>
@@ -44,6 +37,13 @@
 </div>
 
 <!-- Footer: Logo and Navigation -->
+<div class="bg-img-home" #backgroundImage1>
+</div>
+<div class="bg-img-home fade-out" #backgroundImage2>
+</div>
+<div class="bg-img-home screen" #backgroundImageScreen>
+</div>
+
 <div class="logoAndMenu" #logoAndMenuContainer>
   <a href="#" id="logo" class="mainLogo">
     <img src="/assets/logoAnugerah.png" class="cu-logo" alt="GKMI Anugerah">

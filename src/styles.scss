@@ -69,6 +69,12 @@ ul, menu, dir {
     background-color: rgba(45, 45, 45, 0.3);
 }
 
+.hideContent * {
+    display: none !important;
+    transition: 3s ease-in-out;
+    transition-delay: 2s;
+}
+
 /* Content */
 .mainContentContainer {
     width: 33.333%;
