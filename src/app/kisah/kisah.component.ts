@@ -1,18 +1,16 @@
 import { Component, OnInit, ViewChild, AfterViewInit, Renderer2 } from '@angular/core';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-kisah',
+  templateUrl: './kisah.component.html',
+  styleUrls: ['./kisah.component.css']
 })
-export class HomeComponent implements OnInit, AfterViewInit {
+export class KisahComponent implements OnInit, AfterViewInit {
   @ViewChild('backgroundImage1') backgroundImage1: any;
   @ViewChild('backgroundImage2') backgroundImage2: any;
   @ViewChild('backgroundImageScreen') backgroundImageScreen: any;
   @ViewChild('menuButton') menuButton: any;
   @ViewChild('logoAndMenuContainer') logoAndMenuContainer: any;
-  @ViewChild('mainContentContainer') mainContentContainer: any;
-  @ViewChild('homeMenuLinkContainer') homeMenuLinkContainer: any;
 
   constructor(private renderer: Renderer2) {  }
 
@@ -85,13 +83,9 @@ export class HomeComponent implements OnInit, AfterViewInit {
     if (this.menuButton.nativeElement.className === 'menuButton menuButtonOpen') {
       this.menuButton.nativeElement.className = 'menuButton';
       this.logoAndMenuContainer.nativeElement.className = 'logoAndMenu';
-      this.mainContentContainer.nativeElement.className = 'mainContentContainer';
-      this.homeMenuLinkContainer.nativeElement.className = 'homeMenuLinkContainer';
     } else {
       this.menuButton.nativeElement.className = 'menuButton menuButtonOpen';
       this.logoAndMenuContainer.nativeElement.className = 'logoAndMenu navMenuOpen';
-      this.mainContentContainer.nativeElement.className = 'mainContentContainer hideContent';
-      this.homeMenuLinkContainer.nativeElement.className = 'homeMenuLinkContainer hideContent';
     }
   }
 }

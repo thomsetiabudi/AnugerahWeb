@@ -51,14 +51,16 @@ ul, menu, dir {
     z-index: 2;
     min-width: 100%;
     min-height: 100%;
-    width: auto;
-    height: auto;
+    // width: auto;
+    // height: auto;
+    width: 100vw;
+    height: 100vh;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-size: cover;
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
     background-position: center center;
 }
 
@@ -422,6 +424,43 @@ ul, menu, dir {
         right: 0;
         top: 75%;
         height: 25%;
+    }
+}
+
+/* Module Title */
+.moduleTitleVertical {
+    top: 0;
+    left: 0;
+    width: 7%;
+    height: 100vh;
+    margin-top: 0px;
+    display: block !important;
+    color: white;
+    z-index: 21;
+    position: absolute;
+}
+
+.moduleTitleVertical p {
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    top: 50%;
+    left: 3.5vw;
+    width: 400px;
+    -webkit-transform: translate(-50%, -50%) rotate(-90deg);
+    -moz-transform: translate(-50%, -50%) rotate(-90deg);
+    -ms-transform: translate(-50%, -50%) rotate(-90deg);
+    -o-transform: translate(-50%, -50%) rotate(-90deg);
+    transform: translate(-50%, -50%) rotate(-90deg);
+}
+
+/* Adjust Home Menu on small device */
+@media (max-width: 960px) {
+    .moduleTitleVertical {
+        display: none !important;
     }
 }
 
