@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, AfterViewInit, Renderer2 } from '@angular/core';
+import { Component, OnInit, ViewChild, AfterViewInit, Renderer2, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-kisah',
@@ -17,6 +17,11 @@ export class KisahComponent implements OnInit, AfterViewInit {
   constructor(private renderer: Renderer2) {  }
 
   ngOnInit() {
+    if (window.innerWidth <= 960) {
+      this.moduleMenuLinkContainer.nativeElement.style = 'top: ' + window.innerHeight + 'px';
+    } else {
+      this.moduleMenuLinkContainer.nativeElement.style = '';
+    }
   }
 
   ngAfterViewInit() {
@@ -100,6 +105,15 @@ export class KisahComponent implements OnInit, AfterViewInit {
       this.moduleMenuLinkContainer.nativeElement.className = 'moduleMenuLinkContainer';
     } else {
       this.moduleMenuLinkContainer.nativeElement.className = 'moduleMenuLinkContainer moduleMenuOpen';
+    }
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    if (event.target.innerWidth <= 960) {
+      this.moduleMenuLinkContainer.nativeElement.style = 'top: ' + event.target.innerHeight + 'px';
+    } else {
+      this.moduleMenuLinkContainer.nativeElement.style = '';
     }
   }
 }
