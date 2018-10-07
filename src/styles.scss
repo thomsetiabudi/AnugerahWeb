@@ -632,8 +632,88 @@ ul, menu, dir {
         transform: translateY(-50%) rotate(45deg);
     }
 
+    .moduleMenuLinkContainer h2:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 15px !important;
+        width: 6px;
+        height: 6px;
+        margin-top: 0px;
+        opacity: 0;
+        border-top: #13294b 1px solid;
+        border-left: #13294b 1px solid;
+        transform: translateY(-50%) rotate(45deg);
+        transition: 0.5s ease-in-out;
+    }
+
     .moduleMenuLinkContainer a {
+        border-top: none !important;
+        border-bottom: none !important;
         display: none;
+        color: #13294b !important;
+        height: 0px !important;
+        padding: 0 !important;
+        display: block;
+        border-right: 2px solid #13294b !important;
+        border-left: 2px solid #13294b !important;
+        border-bottom: 1px solid rgba(19, 41, 75, 0.5);
+        margin: 0 5vw;
+        transition: 0.25s;
+        opacity: 0;
+        transform: translateX(-2px);
+        display: none;
+    }
+
+    .moduleMenuLinkContainer a:last-child {
+        border-bottom: 2px solid #13294b !important;
+    }
+
+    .moduleMenuLinkContainer a.moduleMenuLinkActive:after {
+        opacity: 0.3;
+        transition: 0.25s ease-in-out;
+    }
+
+    .moduleMenuLinkContainer a.moduleMenuLinkActive:before, .moduleMenuLinkContainer a:hover:before {
+        width: 0vw;
+        transition: 0.25s ease-in-out;
+    }
+
+    .moduleMenuLinkContainer span {
+        margin-left: 0vw !important;
+        transition: 0.25s ease-in-out;
+    }
+
+    .moduleMenuLinkContainer a.moduleMenuLinkActive > span {
+        margin-left: 0vw !important;
+        transition: 0.25s ease-in-out;
+    }
+
+    .moduleMenuLinkContainer.moduleMenuOpen {
+        height: auto !important;
+        transform: translateY(-240px);
+    }
+
+    .moduleMenuLinkContainer.moduleMenuOpen h2:after {
+        margin-top: -5px !important;
+    }
+
+    .moduleMenuLinkContainer.moduleMenuOpen h2:before {
+        opacity: 1;
+        margin-top: 2px !important;
+    }
+
+    .moduleMenuLinkContainer.moduleMenuOpen a {
+        height: 50px !important;
+        transition: 0.25s;
+        opacity: 1;
+        display: block;
+    }
+
+    .moduleMenuLinkContainer.moduleMenuOpen a > span {
+        display: block;
+        padding: 10px 10px;
     }
 }
 

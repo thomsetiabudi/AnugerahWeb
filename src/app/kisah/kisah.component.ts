@@ -94,6 +94,14 @@ export class KisahComponent implements OnInit, AfterViewInit {
       this.moduleTitleVertical.nativeElement.className = 'moduleTitleVertical hideContent';
     }
   }
+
+  onModuleMenuButtonClick() {
+    if (this.moduleMenuLinkContainer.nativeElement.className === 'moduleMenuLinkContainer moduleMenuOpen') {
+      this.moduleMenuLinkContainer.nativeElement.className = 'moduleMenuLinkContainer';
+    } else {
+      this.moduleMenuLinkContainer.nativeElement.className = 'moduleMenuLinkContainer moduleMenuOpen';
+    }
+  }
 }
 
 let firstLoad = true;
