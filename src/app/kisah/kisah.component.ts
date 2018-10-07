@@ -11,6 +11,8 @@ export class KisahComponent implements OnInit, AfterViewInit {
   @ViewChild('backgroundImageScreen') backgroundImageScreen: any;
   @ViewChild('menuButton') menuButton: any;
   @ViewChild('logoAndMenuContainer') logoAndMenuContainer: any;
+  @ViewChild('moduleTitleVertical') moduleTitleVertical: any;
+  @ViewChild('moduleMenuLinkContainer') moduleMenuLinkContainer: any;
 
   constructor(private renderer: Renderer2) {  }
 
@@ -83,9 +85,13 @@ export class KisahComponent implements OnInit, AfterViewInit {
     if (this.menuButton.nativeElement.className === 'menuButton menuButtonOpen') {
       this.menuButton.nativeElement.className = 'menuButton';
       this.logoAndMenuContainer.nativeElement.className = 'logoAndMenu';
+      this.moduleMenuLinkContainer.nativeElement.className = 'moduleMenuLinkContainer';
+      this.moduleTitleVertical.nativeElement.className = 'moduleTitleVertical';
     } else {
       this.menuButton.nativeElement.className = 'menuButton menuButtonOpen';
       this.logoAndMenuContainer.nativeElement.className = 'logoAndMenu navMenuOpen';
+      this.moduleMenuLinkContainer.nativeElement.className = 'moduleMenuLinkContainer hideContent';
+      this.moduleTitleVertical.nativeElement.className = 'moduleTitleVertical hideContent';
     }
   }
 }

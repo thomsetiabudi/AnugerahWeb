@@ -71,8 +71,14 @@ ul, menu, dir {
     background-color: rgba(45, 45, 45, 0.3);
 }
 
+.hideContent {
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+}
+
 .hideContent * {
-    display: none !important;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
 }
 
 /* Content */
@@ -84,6 +90,7 @@ ul, menu, dir {
     z-index: 30;
     left: 7vw !important;
     display: block;
+    transition: 0.5s ease-in-out;
 }
 
 .mainContentContainer > div p {
@@ -212,6 +219,7 @@ ul, menu, dir {
     display: flex;
     flex-wrap: wrap;
     z-index: 31;
+    transition: 0.5s ease-in-out;
 }
 .homeMenuLinkContainer > a {
     width: 50%;
@@ -438,6 +446,7 @@ ul, menu, dir {
     color: white;
     z-index: 21;
     position: absolute;
+    transition: 0.5s ease-in-out;
 }
 
 .moduleTitleVertical p {
@@ -480,6 +489,7 @@ ul, menu, dir {
     height: 100%;
     border-right: 1px solid rgba(255, 255, 255, 0.35);
     border-left: 1px solid rgba(255, 255, 255, 0.35);
+    transition: 0.5s ease-in-out;
 }
 
 .moduleMenuLinkContainer h2 {
@@ -525,6 +535,7 @@ ul, menu, dir {
     margin-left: 2vw;
     right: 2vw;
     transform: translateX(0vw) translateY(-50%);
+    transition: 0.25s ease-in-out;
 }
 
 .moduleMenuLinkContainer a.moduleMenuLinkActive > span {
@@ -559,6 +570,73 @@ ul, menu, dir {
     margin-right: 0vw !important;
     transition: 0.25s ease-in-out;
 }
+
+.moduleMenuLinkContainer a:after {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    background: #13294b;
+    display: block;
+    z-index: 34;
+    opacity: 0;
+    border: 1px solid white;
+    transition: 0.25s ease-in-out;
+}
+
+.moduleMenuLinkContainer a.moduleMenuLinkActive:after {
+    opacity: 0.6;
+    transition: 0.25s ease-in-out;
+}
+
+/* Adjust Module Menu Link on small device */
+@media (max-width: 960px) {
+    .moduleMenuLinkContainer {
+        display: block;
+        position: fixed !important;
+        left: 0 !important;
+        right: 0 !important;
+        margin: 0;
+        width: 100vw;
+        height: auto !important;
+        overflow: hidden;
+        background: white;
+        transform: translateY(calc(-84px));
+        top: 100vh;
+    }
+
+    .moduleMenuLinkContainer h2 {
+        height: 54px;
+        padding: 18px;
+        color: #13294b;
+        position: relative;
+        border: 2px solid #13294b !important;
+        margin: 15px 5vw 0;
+        transform: translateX(-2px);
+        padding-left: 2vw;
+    }
+
+    .moduleMenuLinkContainer h2:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 15px !important;
+        width: 6px;
+        height: 6px;
+        margin-top: -2px;
+        border-bottom: #13294b 1px solid;
+        border-right: #13294b 1px solid;
+        transform: translateY(-50%) rotate(45deg);
+    }
+
+    .moduleMenuLinkContainer a {
+        display: none;
+    }
+}
+
 
 /* Footer: Logo and Navigation */
 .logoAndMenu * {
