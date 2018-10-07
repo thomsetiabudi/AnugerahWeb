@@ -13,6 +13,7 @@ export class KisahComponent implements OnInit, AfterViewInit {
   @ViewChild('logoAndMenuContainer') logoAndMenuContainer: any;
   @ViewChild('moduleTitleVertical') moduleTitleVertical: any;
   @ViewChild('moduleMenuLinkContainer') moduleMenuLinkContainer: any;
+  @ViewChild('moduleContentContainer') moduleContentContainer: any;
 
   constructor(private renderer: Renderer2) {  }
 
@@ -92,11 +93,13 @@ export class KisahComponent implements OnInit, AfterViewInit {
       this.logoAndMenuContainer.nativeElement.className = 'logoAndMenu';
       this.moduleMenuLinkContainer.nativeElement.className = 'moduleMenuLinkContainer';
       this.moduleTitleVertical.nativeElement.className = 'moduleTitleVertical';
+      this.moduleContentContainer.nativeElement.className = 'moduleContentContainer';
     } else {
       this.menuButton.nativeElement.className = 'menuButton menuButtonOpen';
       this.logoAndMenuContainer.nativeElement.className = 'logoAndMenu navMenuOpen';
       this.moduleMenuLinkContainer.nativeElement.className = 'moduleMenuLinkContainer hideContent';
       this.moduleTitleVertical.nativeElement.className = 'moduleTitleVertical hideContent';
+      this.moduleContentContainer.nativeElement.className = 'moduleContentContainer hideContent';
     }
   }
 
