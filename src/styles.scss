@@ -457,11 +457,107 @@ ul, menu, dir {
     transform: translate(-50%, -50%) rotate(-90deg);
 }
 
-/* Adjust Home Menu on small device */
+/* Adjust Module Title on small device */
 @media (max-width: 960px) {
     .moduleTitleVertical {
         display: none !important;
     }
+}
+
+/* Module Menu Link */
+.moduleMenuLinkContainer {
+    right: 7%;
+    width: 23%;
+    font-size: 12px !important;
+    line-height: 1.5em !important;
+    display: flex;
+    min-height: 100%;
+    flex-direction: column;
+    color: white;
+    z-index: 31;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    border-right: 1px solid rgba(255, 255, 255, 0.35);
+    border-left: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.moduleMenuLinkContainer h2 {
+    border-bottom: 1px solid rgba(19, 41, 75, 0.5) !important;
+    padding: 9vw 2vw 2vw;
+    font-size: 10px !important;
+    text-transform: uppercase;
+    font-family: 'montserratregular' !important;
+    letter-spacing: 3px;
+    padding-bottom: 2vw;
+    color: rgba(255, 255, 255, 0.35);
+    border-color: rgba(255, 255, 255, 0.35) !important;
+}
+
+.moduleMenuLinkContainer a {
+    display: block;
+    text-align: center;
+    font-size: 12px !important;
+    line-height: 1.5em !important;
+    position: relative;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+    color: white !important;
+    height: 82px;
+}
+
+.moduleMenuLinkContainer a.moduleMenuLinkActive {
+    pointer-events: none;
+}
+
+.moduleMenuLinkContainer a span {
+    z-index: 35 !important;
+}
+
+.moduleMenuLinkContainer a > span {
+    font-size: 12px !important;
+    line-height: 1.5em !important;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-left: 2vw;
+    right: 2vw;
+    transform: translateX(0vw) translateY(-50%);
+}
+
+.moduleMenuLinkContainer a.moduleMenuLinkActive > span {
+    margin-left: 4vw !important;
+    margin-right: 0vw !important;
+    transition: 0.25s ease-in-out;
+    right: 2vw;
+    transform: translateX(0vw) translateY(-50%);
+}
+
+.moduleMenuLinkContainer a:before {
+    width: 0;
+    display: block;
+    background: #e5e7eb;
+    height: 1px;
+    content: '';
+    margin: 0 0 5px;
+    z-index: 35 !important;
+    position: absolute;
+    top: 50%;
+    left: 2vw;
+    transition: 0.25s ease-in-out;
+}
+
+.moduleMenuLinkContainer a.moduleMenuLinkActive:before, .moduleMenuLinkContainer a:hover:before {
+    width: 1vw;
+    transition: 0.25s ease-in-out;
+}
+
+.moduleMenuLinkContainer a:hover span {
+    margin-left: 4vw !important;
+    margin-right: 0vw !important;
+    transition: 0.25s ease-in-out;
 }
 
 /* Footer: Logo and Navigation */
