@@ -15,25 +15,29 @@ export class KisahComponent implements OnInit, AfterViewInit {
   @ViewChild('moduleMenuLinkContainer') moduleMenuLinkContainer: any;
   @ViewChild('moduleContentContainer') moduleContentContainer: any;
 
-  constructor(private renderer: Renderer2) {  }
+  constructor(private renderer: Renderer2) { }
 
   ngOnInit() {
-    if (window.innerWidth <= 960) {
-      this.moduleMenuLinkContainer.nativeElement.style = 'top: ' + window.innerHeight + 'px';
-    } else {
-      this.moduleMenuLinkContainer.nativeElement.style = '';
-    }
+
   }
 
   ngAfterViewInit() {
-    backgroundImageList = this.shuffle(backgroundImageList);
-    firstLoad = true;
+    setTimeout(() => {
+      if (window.innerWidth <= 960) {
+        this.moduleMenuLinkContainer.nativeElement.style = 'top: ' + window.innerHeight + 'px';
+      } else {
+        this.moduleMenuLinkContainer.nativeElement.style = '';
+      }
 
-    const backgroundImageObject = new Array();
-    backgroundImageObject.push(this.backgroundImage1);
-    backgroundImageObject.push(this.backgroundImage2);
-    this.setBackgroundImage(backgroundImageObject);
-    setInterval(this.setBackgroundImage, 7000, backgroundImageObject);
+      backgroundImageList = this.shuffle(backgroundImageList);
+      firstLoad = true;
+
+      const backgroundImageObject = new Array();
+      backgroundImageObject.push(this.backgroundImage1);
+      backgroundImageObject.push(this.backgroundImage2);
+      this.setBackgroundImage(backgroundImageObject);
+      setInterval(this.setBackgroundImage, 7000, backgroundImageObject);
+    }, 500);
   }
 
   setBackgroundImage(backgroundImageObject) {
@@ -46,7 +50,7 @@ export class KisahComponent implements OnInit, AfterViewInit {
       if (backgroundImageObject[0].nativeElement.className === 'bg-img-home fade-out') {
         backgroundImageObject[1].nativeElement.className = 'bg-img-home fade-out';
         backgroundImageObject[0].nativeElement.className = 'bg-img-home';
-        setTimeout(function() {
+        setTimeout(function () {
           backgroundImageObject[1].nativeElement.style = 'background-image: url(' + backgroundImageList[backgroundImageIndex] + ');';
 
           backgroundImageIndex = backgroundImageIndex + 1;
@@ -57,7 +61,7 @@ export class KisahComponent implements OnInit, AfterViewInit {
       } else {
         backgroundImageObject[0].nativeElement.className = 'bg-img-home fade-out';
         backgroundImageObject[1].nativeElement.className = 'bg-img-home';
-        setTimeout(function() {
+        setTimeout(function () {
           backgroundImageObject[0].nativeElement.style = 'background-image: url(' + backgroundImageList[backgroundImageIndex] + ');';
 
           backgroundImageIndex = backgroundImageIndex + 1;
@@ -113,11 +117,13 @@ export class KisahComponent implements OnInit, AfterViewInit {
 
   @HostListener('window:resize', ['$event'])
   onResize(event) {
-    if (event.target.innerWidth <= 960) {
-      this.moduleMenuLinkContainer.nativeElement.style = 'top: ' + event.target.innerHeight + 'px';
-    } else {
-      this.moduleMenuLinkContainer.nativeElement.style = '';
-    }
+    setTimeout(() => {
+      if (window.innerWidth <= 960) {
+        this.moduleMenuLinkContainer.nativeElement.style = 'top: ' + window.innerHeight + 'px';
+      } else {
+        this.moduleMenuLinkContainer.nativeElement.style = '';
+      }
+    }, 500);
   }
 }
 

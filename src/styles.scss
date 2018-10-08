@@ -31,6 +31,21 @@ body {
     background-color: $primaryBackgroundColor !important;
 }
 
+/* Adjust Module Content on small device */
+@media (max-width: 960px) {
+    body {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        overflow: hidden !important;
+    }
+
+    html {
+        overflow: hidden;
+    }
+}
+
 a {
     text-decoration: none !important;
 }
@@ -51,10 +66,8 @@ ul, menu, dir {
     z-index: 2;
     min-width: 100%;
     min-height: 100%;
-    // width: auto;
-    // height: auto;
-    width: 100vw;
-    height: 100vh;
+    width: auto;
+    height: auto;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -157,8 +170,12 @@ ul, menu, dir {
         margin-left: 0px;
     }
 
+    .moduleContentTitle {
+        font-size: 16px !important;
+    }
+
     .moduleContentText {
-        max-height: 200px;
+        max-height: 50vh;
         overflow: auto;
     }
 }
@@ -174,13 +191,16 @@ ul, menu, dir {
         left: 7vw !important;
     }
 
+    .moduleContentModuleTitle {
+        display: none !important;
+    }
+
     .moduleContentTitle {
-        font-size: 15px !important;
-        text-transform: uppercase;
+        font-size: 14px !important;
     }
 
     .moduleContentText {
-        max-height: 80px;
+        max-height: 30vh;
         overflow: auto;
     }
 }
@@ -518,6 +538,11 @@ ul, menu, dir {
         max-width:35px;
         max-height:35px;
     }
+
+    .homeMenuLink:hover .homeMenuLinkText {
+        transform: translateY(0px);
+        transition: 0.25s ease-in-out;
+    }
 }
 
 /* Adjust Home Menu on small device landscape */
@@ -700,7 +725,7 @@ ul, menu, dir {
 @media (max-width: 960px) {
     .moduleMenuLinkContainer {
         display: block;
-        position: fixed !important;
+        position: absolute;
         left: 0 !important;
         right: 0 !important;
         margin: 0;
@@ -709,6 +734,7 @@ ul, menu, dir {
         overflow: hidden;
         background: white;
         transform: translateY(calc(-84px));
+        top: 100%;
     }
 
     .moduleMenuLinkContainer h2 {

@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, AfterViewInit, Renderer2 } from '@angular/core';
+import { Component, OnInit, ViewChild, AfterViewInit, Renderer2, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -14,34 +14,68 @@ export class HomeComponent implements OnInit, AfterViewInit {
   @ViewChild('mainContentContainer') mainContentContainer: any;
   @ViewChild('homeMenuLinkContainer') homeMenuLinkContainer: any;
 
-  constructor(private renderer: Renderer2) {  }
+  constructor(private renderer: Renderer2) { }
 
   ngOnInit() {
   }
 
   ngAfterViewInit() {
-    backgroundImageList = this.shuffle(backgroundImageList);
-    firstLoad = true;
+    setTimeout(() => {
+      if (window.innerWidth <= 960) {
+        const topValue = Math.round(window.innerHeight * 0.75);
+        const heightValue = window.innerHeight - topValue;
+        this.homeMenuLinkContainer.nativeElement.style = 'top: ' + topValue + 'px; height: ' + heightValue + 'px;';
+        this.backgroundImage1.nativeElement.style.height = window.innerHeight + 'px';
+        this.backgroundImage1.nativeElement.style.width = window.innerWidth + 'px';
+        this.backgroundImage2.nativeElement.style.height = window.innerHeight + 'px';
+        this.backgroundImage2.nativeElement.style.width = window.innerWidth + 'px';
+        this.backgroundImageScreen.nativeElement.style.height = window.innerHeight + 'px';
+        this.backgroundImageScreen.nativeElement.style.width = window.innerWidth + 'px';
+      } else {
+        this.homeMenuLinkContainer.nativeElement.style = '';
+        this.backgroundImage1.nativeElement.style.height = '';
+        this.backgroundImage1.nativeElement.style.width = '';
+        this.backgroundImage2.nativeElement.style.height = '';
+        this.backgroundImage2.nativeElement.style.width = '';
+        this.backgroundImageScreen.nativeElement.style.height = '';
+        this.backgroundImageScreen.nativeElement.style.width = '';
+      }
 
-    const backgroundImageObject = new Array();
-    backgroundImageObject.push(this.backgroundImage1);
-    backgroundImageObject.push(this.backgroundImage2);
-    this.setBackgroundImage(backgroundImageObject);
-    setInterval(this.setBackgroundImage, 7000, backgroundImageObject);
+      backgroundImageList = this.shuffle(backgroundImageList);
+      firstLoad = true;
+
+      const backgroundImageObject = new Array();
+      backgroundImageObject.push(this.backgroundImage1);
+      backgroundImageObject.push(this.backgroundImage2);
+      this.setBackgroundImage(backgroundImageObject);
+      setInterval(this.setBackgroundImage, 7000, backgroundImageObject);
+    }, 500);
   }
 
   setBackgroundImage(backgroundImageObject) {
     if (firstLoad) {
+      const firstHeight = backgroundImageObject[0].nativeElement.style.height;
+      const firstWidth = backgroundImageObject[0].nativeElement.style.width;
+      const secondHeight = backgroundImageObject[1].nativeElement.style.height;
+      const secondWidth = backgroundImageObject[1].nativeElement.style.width;
       backgroundImageObject[0].nativeElement.style = 'background-image: url(' + backgroundImageList[backgroundImageIndex] + ');';
+      backgroundImageObject[0].nativeElement.style.height = firstHeight;
+      backgroundImageObject[0].nativeElement.style.width = firstWidth;
       backgroundImageObject[1].nativeElement.style = 'background-image: url(' + backgroundImageList[backgroundImageIndex + 1] + ');';
+      backgroundImageObject[1].nativeElement.style.height = secondHeight;
+      backgroundImageObject[1].nativeElement.style.width = secondWidth;
       backgroundImageIndex = backgroundImageIndex + 2;
       firstLoad = false;
     } else {
       if (backgroundImageObject[0].nativeElement.className === 'bg-img-home fade-out') {
         backgroundImageObject[1].nativeElement.className = 'bg-img-home fade-out';
         backgroundImageObject[0].nativeElement.className = 'bg-img-home';
-        setTimeout(function() {
+        setTimeout(function () {
+          const secondHeight = backgroundImageObject[1].nativeElement.style.height;
+          const secondWidth = backgroundImageObject[1].nativeElement.style.width;
           backgroundImageObject[1].nativeElement.style = 'background-image: url(' + backgroundImageList[backgroundImageIndex] + ');';
+          backgroundImageObject[1].nativeElement.style.height = secondHeight;
+          backgroundImageObject[1].nativeElement.style.width = secondWidth;
 
           backgroundImageIndex = backgroundImageIndex + 1;
           if (backgroundImageIndex >= backgroundImageList.length) {
@@ -51,8 +85,12 @@ export class HomeComponent implements OnInit, AfterViewInit {
       } else {
         backgroundImageObject[0].nativeElement.className = 'bg-img-home fade-out';
         backgroundImageObject[1].nativeElement.className = 'bg-img-home';
-        setTimeout(function() {
+        setTimeout(function () {
+          const firstHeight = backgroundImageObject[0].nativeElement.style.height;
+          const firstWidth = backgroundImageObject[0].nativeElement.style.width;
           backgroundImageObject[0].nativeElement.style = 'background-image: url(' + backgroundImageList[backgroundImageIndex] + ');';
+          backgroundImageObject[0].nativeElement.style.height = firstHeight;
+          backgroundImageObject[0].nativeElement.style.width = firstWidth;
 
           backgroundImageIndex = backgroundImageIndex + 1;
           if (backgroundImageIndex >= backgroundImageList.length) {
@@ -94,8 +132,47 @@ export class HomeComponent implements OnInit, AfterViewInit {
       this.homeMenuLinkContainer.nativeElement.className = 'homeMenuLinkContainer hideContent';
     }
   }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    if (event != null) {
+      resizeCounter = 0;
+    }
+
+    setTimeout(() => {
+      if (window.innerWidth <= 960) {
+        const topValue = Math.round(window.innerHeight * 0.75);
+        const heightValue = window.innerHeight - topValue;
+        this.homeMenuLinkContainer.nativeElement.style = 'top: ' + topValue + 'px; height: ' + heightValue + 'px;';
+        this.homeMenuLinkContainer.nativeElement.style.width = window.innerWidth + 'px';
+        this.backgroundImage1.nativeElement.style.height = (window.innerHeight + 70) + 'px';
+        this.backgroundImage1.nativeElement.style.width = window.innerWidth + 'px';
+        this.backgroundImage2.nativeElement.style.height = (window.innerHeight + 70) + 'px';
+        this.backgroundImage2.nativeElement.style.width = window.innerWidth + 'px';
+        this.backgroundImageScreen.nativeElement.style.height = (window.innerHeight + 70) + 'px';
+        this.backgroundImageScreen.nativeElement.style.width = window.innerWidth + 'px';
+      } else {
+        this.homeMenuLinkContainer.nativeElement.style = '';
+        this.homeMenuLinkContainer.nativeElement.style.width = '';
+        this.backgroundImage1.nativeElement.style.height = '';
+        this.backgroundImage1.nativeElement.style.width = '';
+        this.backgroundImage2.nativeElement.style.height = '';
+        this.backgroundImage2.nativeElement.style.width = '';
+        this.backgroundImageScreen.nativeElement.style.height = '';
+        this.backgroundImageScreen.nativeElement.style.width = '';
+      }
+
+      resizeCounter = resizeCounter + 1;
+      if (resizeCounter < 15) {
+        setTimeout(() => {
+          this.onResize(null);
+        }, 50);
+      }
+    }, 50);
+  }
 }
 
+let resizeCounter = 0;
 let firstLoad = true;
 let backgroundImageIndex = 0;
 let backgroundImageList = new Array();
