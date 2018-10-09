@@ -6,11 +6,11 @@ import { Component, OnInit, ViewChild, AfterViewInit, HostListener } from '@angu
   styleUrls: ['./kisah.component.css']
 })
 export class KisahComponent implements OnInit, AfterViewInit {
-  @ViewChild('menuButton') menuButton: any;
-  @ViewChild('logoAndMenuContainer') logoAndMenuContainer: any;
   @ViewChild('moduleTitleVertical') moduleTitleVertical: any;
   @ViewChild('moduleMenuLinkContainer') moduleMenuLinkContainer: any;
   @ViewChild('moduleContentContainer') moduleContentContainer: any;
+
+  currentOverlayMenu = 'kisah';
 
   constructor() { }
 
@@ -28,20 +28,16 @@ export class KisahComponent implements OnInit, AfterViewInit {
     }, 500);
   }
 
-  onMenuButtonClick() {
-    if (this.menuButton.nativeElement.className === 'menuButton menuButtonOpen') {
-      this.menuButton.nativeElement.className = 'menuButton';
-      this.logoAndMenuContainer.nativeElement.className = 'logoAndMenu';
+  onOverlayMenuActivated(activated: boolean) {
+    if (!activated) {
       this.moduleMenuLinkContainer.nativeElement.className = 'moduleMenuLinkContainer';
       this.moduleTitleVertical.nativeElement.className = 'moduleTitleVertical';
       this.moduleContentContainer.nativeElement.className = 'moduleContentContainer';
-    } else {
-      this.menuButton.nativeElement.className = 'menuButton menuButtonOpen';
-      this.logoAndMenuContainer.nativeElement.className = 'logoAndMenu navMenuOpen';
+     } else {
       this.moduleMenuLinkContainer.nativeElement.className = 'moduleMenuLinkContainer hideContent';
       this.moduleTitleVertical.nativeElement.className = 'moduleTitleVertical hideContent';
       this.moduleContentContainer.nativeElement.className = 'moduleContentContainer hideContent';
-    }
+     }
   }
 
   onModuleMenuButtonClick() {

@@ -6,10 +6,10 @@ import { Component, OnInit, ViewChild, AfterViewInit, HostListener } from '@angu
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit, AfterViewInit {
-  @ViewChild('menuButton') menuButton: any;
-  @ViewChild('logoAndMenuContainer') logoAndMenuContainer: any;
   @ViewChild('mainContentContainer') mainContentContainer: any;
   @ViewChild('homeMenuLinkContainer') homeMenuLinkContainer: any;
+
+  currentOverlayMenu = 'home';
 
   constructor() { }
 
@@ -28,18 +28,14 @@ export class HomeComponent implements OnInit, AfterViewInit {
     }, 500);
   }
 
-  onMenuButtonClick() {
-    if (this.menuButton.nativeElement.className === 'menuButton menuButtonOpen') {
-      this.menuButton.nativeElement.className = 'menuButton';
-      this.logoAndMenuContainer.nativeElement.className = 'logoAndMenu';
+  onOverlayMenuActivated(activated: boolean) {
+    if (!activated) {
       this.mainContentContainer.nativeElement.className = 'mainContentContainer';
       this.homeMenuLinkContainer.nativeElement.className = 'homeMenuLinkContainer';
-    } else {
-      this.menuButton.nativeElement.className = 'menuButton menuButtonOpen';
-      this.logoAndMenuContainer.nativeElement.className = 'logoAndMenu navMenuOpen';
+     } else {
       this.mainContentContainer.nativeElement.className = 'mainContentContainer hideContent';
       this.homeMenuLinkContainer.nativeElement.className = 'homeMenuLinkContainer hideContent';
-    }
+     }
   }
 
   @HostListener('window:resize', ['$event'])
