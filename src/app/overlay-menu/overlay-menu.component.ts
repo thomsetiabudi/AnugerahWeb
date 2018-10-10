@@ -3,7 +3,7 @@ import { Component, OnInit, ViewChild, AfterViewInit, Input, Output, EventEmitte
 @Component({
   selector: 'app-overlay-menu',
   templateUrl: './overlay-menu.component.html',
-  styleUrls: ['./overlay-menu.component.css']
+  styleUrls: ['./overlay-menu.component.scss']
 })
 export class OverlayMenuComponent implements OnInit, AfterViewInit {
   @ViewChild('menuButton') menuButton: any;

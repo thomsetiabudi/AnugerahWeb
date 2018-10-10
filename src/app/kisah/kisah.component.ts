@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild, AfterViewInit, HostListener } from '@angular/core';
+import { ModuleVerticalTitleComponent } from '../module-vertical-title/module-vertical-title.component';
 
 @Component({
   selector: 'app-kisah',
@@ -6,7 +7,7 @@ import { Component, OnInit, ViewChild, AfterViewInit, HostListener } from '@angu
   styleUrls: ['./kisah.component.css']
 })
 export class KisahComponent implements OnInit, AfterViewInit {
-  @ViewChild('moduleTitleVertical') moduleTitleVertical: any;
+  @ViewChild('moduleTitleVertical') moduleTitleVertical: ModuleVerticalTitleComponent;
   @ViewChild('moduleMenuLinkContainer') moduleMenuLinkContainer: any;
   @ViewChild('moduleContentContainer') moduleContentContainer: any;
 
@@ -31,11 +32,11 @@ export class KisahComponent implements OnInit, AfterViewInit {
   onOverlayMenuActivated(activated: boolean) {
     if (!activated) {
       this.moduleMenuLinkContainer.nativeElement.className = 'moduleMenuLinkContainer';
-      this.moduleTitleVertical.nativeElement.className = 'moduleTitleVertical';
+      this.moduleTitleVertical.toggleHideComponent(false);
       this.moduleContentContainer.nativeElement.className = 'moduleContentContainer';
      } else {
       this.moduleMenuLinkContainer.nativeElement.className = 'moduleMenuLinkContainer hideContent';
-      this.moduleTitleVertical.nativeElement.className = 'moduleTitleVertical hideContent';
+      this.moduleTitleVertical.toggleHideComponent(true);
       this.moduleContentContainer.nativeElement.className = 'moduleContentContainer hideContent';
      }
   }

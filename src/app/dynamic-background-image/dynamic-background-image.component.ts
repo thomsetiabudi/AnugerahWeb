@@ -3,7 +3,7 @@ import { Component, OnInit, ViewChild, AfterViewInit, HostListener } from '@angu
 @Component({
   selector: 'app-dynamic-background-image',
   templateUrl: './dynamic-background-image.component.html',
-  styleUrls: ['./dynamic-background-image.component.css']
+  styleUrls: ['./dynamic-background-image.component.scss']
 })
 export class DynamicBackgroundImageComponent implements OnInit, AfterViewInit {
   @ViewChild('backgroundImage1') backgroundImage1: any;
