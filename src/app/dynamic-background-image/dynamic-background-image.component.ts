@@ -18,74 +18,63 @@ export class DynamicBackgroundImageComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     setTimeout(() => {
       if (window.innerWidth <= 960) {
-        const topValue = Math.round(window.innerHeight * 0.75);
-        const heightValue = window.innerHeight - topValue;
-        this.backgroundImage1.nativeElement.style.height = window.innerHeight + 'px';
-        this.backgroundImage1.nativeElement.style.width = window.innerWidth + 'px';
-        this.backgroundImage2.nativeElement.style.height = window.innerHeight + 'px';
-        this.backgroundImage2.nativeElement.style.width = window.innerWidth + 'px';
-        this.backgroundImageScreen.nativeElement.style.height = window.innerHeight + 'px';
-        this.backgroundImageScreen.nativeElement.style.width = window.innerWidth + 'px';
+        (this.backgroundImage1.nativeElement as HTMLElement).style.height = window.innerHeight + 'px';
+        (this.backgroundImage1.nativeElement as HTMLElement).style.width = window.innerWidth + 'px';
+        (this.backgroundImage2.nativeElement as HTMLElement).style.height = window.innerHeight + 'px';
+        (this.backgroundImage2.nativeElement as HTMLElement).style.width = window.innerWidth + 'px';
+        (this.backgroundImageScreen.nativeElement as HTMLElement).style.height = window.innerHeight + 'px';
+        (this.backgroundImageScreen.nativeElement as HTMLElement).style.width = window.innerWidth + 'px';
       } else {
-        this.backgroundImage1.nativeElement.style.height = '';
-        this.backgroundImage1.nativeElement.style.width = '';
-        this.backgroundImage2.nativeElement.style.height = '';
-        this.backgroundImage2.nativeElement.style.width = '';
-        this.backgroundImageScreen.nativeElement.style.height = '';
-        this.backgroundImageScreen.nativeElement.style.width = '';
+        (this.backgroundImage1.nativeElement as HTMLElement).style.height = '';
+        (this.backgroundImage1.nativeElement as HTMLElement).style.width = '';
+        (this.backgroundImage2.nativeElement as HTMLElement).style.height = '';
+        (this.backgroundImage2.nativeElement as HTMLElement).style.width = '';
+        (this.backgroundImageScreen.nativeElement as HTMLElement).style.height = '';
+        (this.backgroundImageScreen.nativeElement as HTMLElement).style.width = '';
       }
 
       backgroundImageList = this.shuffle(backgroundImageList);
       firstLoad = true;
 
-      const backgroundImageObject = new Array();
-      backgroundImageObject.push(this.backgroundImage1);
-      backgroundImageObject.push(this.backgroundImage2);
-      this.setBackgroundImage(backgroundImageObject);
-      setInterval(this.setBackgroundImage, 7000, backgroundImageObject);
+      this.setBackgroundImage();
+      setInterval(() => {
+        this.setBackgroundImage();
+      }, 7000);
     }, 500);
   }
 
-  setBackgroundImage(backgroundImageObject) {
+  setBackgroundImage() {
     if (firstLoad) {
-      const firstHeight = backgroundImageObject[0].nativeElement.style.height;
-      const firstWidth = backgroundImageObject[0].nativeElement.style.width;
-      const secondHeight = backgroundImageObject[1].nativeElement.style.height;
-      const secondWidth = backgroundImageObject[1].nativeElement.style.width;
-      backgroundImageObject[0].nativeElement.style = 'background-image: url(' + backgroundImageList[backgroundImageIndex] + ');';
-      backgroundImageObject[0].nativeElement.style.height = firstHeight;
-      backgroundImageObject[0].nativeElement.style.width = firstWidth;
-      backgroundImageObject[1].nativeElement.style = 'background-image: url(' + backgroundImageList[backgroundImageIndex + 1] + ');';
-      backgroundImageObject[1].nativeElement.style.height = secondHeight;
-      backgroundImageObject[1].nativeElement.style.width = secondWidth;
+      (this.backgroundImage1.nativeElement as HTMLElement).style.backgroundImage =
+        'url(' + backgroundImageList[backgroundImageIndex] + ')';
+      (this.backgroundImage2.nativeElement as HTMLElement).style.backgroundImage =
+        'url(' + backgroundImageList[backgroundImageIndex + 1] + ')';
       backgroundImageIndex = backgroundImageIndex + 2;
       firstLoad = false;
     } else {
-      if (backgroundImageObject[0].nativeElement.className === 'bg-img-home fade-out') {
-        backgroundImageObject[1].nativeElement.className = 'bg-img-home fade-out';
-        backgroundImageObject[0].nativeElement.className = 'bg-img-home';
-        setTimeout(function () {
-          const secondHeight = backgroundImageObject[1].nativeElement.style.height;
-          const secondWidth = backgroundImageObject[1].nativeElement.style.width;
-          backgroundImageObject[1].nativeElement.style = 'background-image: url(' + backgroundImageList[backgroundImageIndex] + ');';
-          backgroundImageObject[1].nativeElement.style.height = secondHeight;
-          backgroundImageObject[1].nativeElement.style.width = secondWidth;
+      console.log((this.backgroundImage1.nativeElement as HTMLElement).className);
 
+      if ((this.backgroundImage1.nativeElement as HTMLElement).className === 'bg-img-home fade-out') {
+        console.log('hide 2, show 1');
+        (this.backgroundImage2.nativeElement as HTMLElement).className = 'bg-img-home fade-out';
+        (this.backgroundImage1.nativeElement as HTMLElement).className = 'bg-img-home';
+        setTimeout(() => {
+          console.log('change URL 2');
+          (this.backgroundImage2.nativeElement as HTMLElement).style.backgroundImage =
+            'url(' + backgroundImageList[backgroundImageIndex] + ')';
           backgroundImageIndex = backgroundImageIndex + 1;
           if (backgroundImageIndex >= backgroundImageList.length) {
             backgroundImageIndex = 0;
           }
         }, 2000);
       } else {
-        backgroundImageObject[0].nativeElement.className = 'bg-img-home fade-out';
-        backgroundImageObject[1].nativeElement.className = 'bg-img-home';
-        setTimeout(function () {
-          const firstHeight = backgroundImageObject[0].nativeElement.style.height;
-          const firstWidth = backgroundImageObject[0].nativeElement.style.width;
-          backgroundImageObject[0].nativeElement.style = 'background-image: url(' + backgroundImageList[backgroundImageIndex] + ');';
-          backgroundImageObject[0].nativeElement.style.height = firstHeight;
-          backgroundImageObject[0].nativeElement.style.width = firstWidth;
-
+        console.log('hide 1, show 2');
+        (this.backgroundImage1.nativeElement as HTMLElement).className = 'bg-img-home fade-out';
+        (this.backgroundImage2.nativeElement as HTMLElement).className = 'bg-img-home';
+        setTimeout(() => {
+          console.log('change URL 1: ' + backgroundImageList[backgroundImageIndex]);
+          (this.backgroundImage1.nativeElement as HTMLElement).style.backgroundImage =
+            'url(' + backgroundImageList[backgroundImageIndex] + ')';
           backgroundImageIndex = backgroundImageIndex + 1;
           if (backgroundImageIndex >= backgroundImageList.length) {
             backgroundImageIndex = 0;
@@ -121,21 +110,19 @@ export class DynamicBackgroundImageComponent implements OnInit, AfterViewInit {
 
     setTimeout(() => {
       if (window.innerWidth <= 960) {
-        const topValue = Math.round(window.innerHeight * 0.75);
-        const heightValue = window.innerHeight - topValue;
-        this.backgroundImage1.nativeElement.style.height = (window.innerHeight + 70) + 'px';
-        this.backgroundImage1.nativeElement.style.width = window.innerWidth + 'px';
-        this.backgroundImage2.nativeElement.style.height = (window.innerHeight + 70) + 'px';
-        this.backgroundImage2.nativeElement.style.width = window.innerWidth + 'px';
-        this.backgroundImageScreen.nativeElement.style.height = (window.innerHeight + 70) + 'px';
-        this.backgroundImageScreen.nativeElement.style.width = window.innerWidth + 'px';
+        (this.backgroundImage1.nativeElement as HTMLElement).style.height = (window.innerHeight + 70) + 'px';
+        (this.backgroundImage1.nativeElement as HTMLElement).style.width = window.innerWidth + 'px';
+        (this.backgroundImage2.nativeElement as HTMLElement).style.height = (window.innerHeight + 70) + 'px';
+        (this.backgroundImage2.nativeElement as HTMLElement).style.width = window.innerWidth + 'px';
+        (this.backgroundImageScreen.nativeElement as HTMLElement).style.height = (window.innerHeight + 70) + 'px';
+        (this.backgroundImageScreen.nativeElement as HTMLElement).style.width = window.innerWidth + 'px';
       } else {
-        this.backgroundImage1.nativeElement.style.height = '';
-        this.backgroundImage1.nativeElement.style.width = '';
-        this.backgroundImage2.nativeElement.style.height = '';
-        this.backgroundImage2.nativeElement.style.width = '';
-        this.backgroundImageScreen.nativeElement.style.height = '';
-        this.backgroundImageScreen.nativeElement.style.width = '';
+        (this.backgroundImage1.nativeElement as HTMLElement).style.height = '';
+        (this.backgroundImage1.nativeElement as HTMLElement).style.width = '';
+        (this.backgroundImage2.nativeElement as HTMLElement).style.height = '';
+        (this.backgroundImage2.nativeElement as HTMLElement).style.width = '';
+        (this.backgroundImageScreen.nativeElement as HTMLElement).style.height = '';
+        (this.backgroundImageScreen.nativeElement as HTMLElement).style.width = '';
       }
 
       resizeCounter = resizeCounter + 1;
