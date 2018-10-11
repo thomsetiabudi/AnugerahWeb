@@ -8,6 +8,7 @@ import { KisahComponent } from './kisah/kisah.component';
 import { DynamicBackgroundImageComponent } from './dynamic-background-image/dynamic-background-image.component';
 import { OverlayMenuComponent } from './overlay-menu/overlay-menu.component';
 import { ModuleVerticalTitleComponent } from './module-vertical-title/module-vertical-title.component';
+import { ModuleMenuComponent } from './module-menu/module-menu.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ModuleVerticalTitleComponent } from './module-vertical-title/module-ver
     KisahComponent,
     DynamicBackgroundImageComponent,
     OverlayMenuComponent,
-    ModuleVerticalTitleComponent
+    ModuleVerticalTitleComponent,
+    ModuleMenuComponent
   ],
   imports: [
     BrowserModule,

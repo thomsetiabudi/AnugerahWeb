@@ -1,5 +1,7 @@
 import { Component, OnInit, ViewChild, AfterViewInit, HostListener } from '@angular/core';
 import { ModuleVerticalTitleComponent } from '../module-vertical-title/module-vertical-title.component';
+import { ModuleMenuComponent } from '../module-menu/module-menu.component';
+import { ModuleMenuLink } from '../module-menu-link';
 
 @Component({
   selector: 'app-kisah',
@@ -8,10 +10,15 @@ import { ModuleVerticalTitleComponent } from '../module-vertical-title/module-ve
 })
 export class KisahComponent implements OnInit, AfterViewInit {
   @ViewChild('moduleTitleVertical') moduleTitleVertical: ModuleVerticalTitleComponent;
-  @ViewChild('moduleMenuLinkContainer') moduleMenuLinkContainer: any;
+  @ViewChild('moduleMenuLinkContainer') moduleMenuLinkContainer: ModuleMenuComponent;
   @ViewChild('moduleContentContainer') moduleContentContainer: any;
 
   currentOverlayMenu = 'kisah';
+  moduleTitle = 'Kisah Kami';
+  moduleMenuLinkList: ModuleMenuLink[] = [
+    { title: 'Sejarah', routerLink: '/kisah', isActive: true },
+    { title: 'Gembala Kami', routerLink: '/', isActive: false }
+  ];
 
   constructor() { }
 
@@ -20,56 +27,18 @@ export class KisahComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    setTimeout(() => {
-      if (window.innerWidth <= 960) {
-        (this.moduleMenuLinkContainer.nativeElement as HTMLElement).style.top = window.innerHeight + 'px';
-      } else {
-        (this.moduleMenuLinkContainer.nativeElement as HTMLElement).style.top = '';
-      }
-    }, 500);
   }
 
   onOverlayMenuActivated(activated: boolean) {
     if (!activated) {
-      (this.moduleMenuLinkContainer.nativeElement as HTMLElement).className = 'moduleMenuLinkContainer';
+      this.moduleContentContainer.toggleHideComponent(false);
       this.moduleTitleVertical.toggleHideComponent(false);
       (this.moduleContentContainer.nativeElement as HTMLElement).className = 'moduleContentContainer';
      } else {
-      (this.moduleMenuLinkContainer.nativeElement as HTMLElement).className = 'moduleMenuLinkContainer hideContent';
+      this.moduleContentContainer.toggleHideComponent(true);
       this.moduleTitleVertical.toggleHideComponent(true);
       (this.moduleContentContainer.nativeElement as HTMLElement).className = 'moduleContentContainer hideContent';
      }
   }
-
-  onModuleMenuButtonClick() {
-    if ((this.moduleMenuLinkContainer.nativeElement as HTMLElement).className === 'moduleMenuLinkContainer moduleMenuOpen') {
-      (this.moduleMenuLinkContainer.nativeElement as HTMLElement).className = 'moduleMenuLinkContainer';
-    } else {
-      (this.moduleMenuLinkContainer.nativeElement as HTMLElement).className = 'moduleMenuLinkContainer moduleMenuOpen';
-    }
-  }
-
-  @HostListener('window:resize', ['$event'])
-  onResize(event) {
-    if (event != null) {
-      resizeCounter = 0;
-    }
-
-    setTimeout(() => {
-      if (window.innerWidth <= 960) {
-        (this.moduleMenuLinkContainer.nativeElement as HTMLElement).style.top = window.innerHeight + 'px';
-      } else {
-        (this.moduleMenuLinkContainer.nativeElement as HTMLElement).style.top = '';
-      }
-
-      resizeCounter = resizeCounter + 1;
-      if (resizeCounter < 15) {
-        setTimeout(() => {
-          this.onResize(null);
-        }, 50);
-      }
-    }, 50);
-  }
 }
 
-let resizeCounter = 0;
