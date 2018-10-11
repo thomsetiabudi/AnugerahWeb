@@ -22,41 +22,54 @@ export class KisahComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     setTimeout(() => {
       if (window.innerWidth <= 960) {
-        this.moduleMenuLinkContainer.nativeElement.style = 'top: ' + window.innerHeight + 'px';
+        (this.moduleMenuLinkContainer.nativeElement as HTMLElement).style.top = window.innerHeight + 'px';
       } else {
-        this.moduleMenuLinkContainer.nativeElement.style = '';
+        (this.moduleMenuLinkContainer.nativeElement as HTMLElement).style.top = '';
       }
     }, 500);
   }
 
   onOverlayMenuActivated(activated: boolean) {
     if (!activated) {
-      this.moduleMenuLinkContainer.nativeElement.className = 'moduleMenuLinkContainer';
+      (this.moduleMenuLinkContainer.nativeElement as HTMLElement).className = 'moduleMenuLinkContainer';
       this.moduleTitleVertical.toggleHideComponent(false);
-      this.moduleContentContainer.nativeElement.className = 'moduleContentContainer';
+      (this.moduleContentContainer.nativeElement as HTMLElement).className = 'moduleContentContainer';
      } else {
-      this.moduleMenuLinkContainer.nativeElement.className = 'moduleMenuLinkContainer hideContent';
+      (this.moduleMenuLinkContainer.nativeElement as HTMLElement).className = 'moduleMenuLinkContainer hideContent';
       this.moduleTitleVertical.toggleHideComponent(true);
-      this.moduleContentContainer.nativeElement.className = 'moduleContentContainer hideContent';
+      (this.moduleContentContainer.nativeElement as HTMLElement).className = 'moduleContentContainer hideContent';
      }
   }
 
   onModuleMenuButtonClick() {
-    if (this.moduleMenuLinkContainer.nativeElement.className === 'moduleMenuLinkContainer moduleMenuOpen') {
-      this.moduleMenuLinkContainer.nativeElement.className = 'moduleMenuLinkContainer';
+    if ((this.moduleMenuLinkContainer.nativeElement as HTMLElement).className === 'moduleMenuLinkContainer moduleMenuOpen') {
+      (this.moduleMenuLinkContainer.nativeElement as HTMLElement).className = 'moduleMenuLinkContainer';
     } else {
-      this.moduleMenuLinkContainer.nativeElement.className = 'moduleMenuLinkContainer moduleMenuOpen';
+      (this.moduleMenuLinkContainer.nativeElement as HTMLElement).className = 'moduleMenuLinkContainer moduleMenuOpen';
     }
   }
 
   @HostListener('window:resize', ['$event'])
   onResize(event) {
+    if (event != null) {
+      resizeCounter = 0;
+    }
+
     setTimeout(() => {
       if (window.innerWidth <= 960) {
-        this.moduleMenuLinkContainer.nativeElement.style = 'top: ' + window.innerHeight + 'px';
+        (this.moduleMenuLinkContainer.nativeElement as HTMLElement).style.top = window.innerHeight + 'px';
       } else {
-        this.moduleMenuLinkContainer.nativeElement.style = '';
+        (this.moduleMenuLinkContainer.nativeElement as HTMLElement).style.top = '';
       }
-    }, 500);
+
+      resizeCounter = resizeCounter + 1;
+      if (resizeCounter < 15) {
+        setTimeout(() => {
+          this.onResize(null);
+        }, 50);
+      }
+    }, 50);
   }
 }
+
+let resizeCounter = 0;

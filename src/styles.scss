@@ -156,6 +156,14 @@ ul, menu, dir {
     }
 }
 
+/* Adjust Main Content on small device super short */
+@media (max-width: 960px) and (max-height: 460px) {
+    .moduleContentText {
+        max-height: 40vh;
+        overflow: auto;
+    }
+}
+
 /* Adjust Main Content on small device landscape */
 @media (max-width: 960px) and (max-height: 420px) {
     .moduleContentContainer {
@@ -177,6 +185,14 @@ ul, menu, dir {
 
     .moduleContentText {
         max-height: 30vh;
+        overflow: auto;
+    }
+}
+
+/* Adjust Main Content on small device landscape */
+@media (max-width: 960px) and (max-height: 210px) {
+    .moduleContentText {
+        max-height: 20vh;
         overflow: auto;
     }
 }
@@ -308,7 +324,8 @@ ul, menu, dir {
         right: 0 !important;
         margin: 0;
         width: 100vw;
-        height: auto !important;
+        min-height: 84px;
+        height: 84px !important;
         overflow: hidden;
         background: white;
         transform: translateY(calc(-84px));
@@ -399,8 +416,8 @@ ul, menu, dir {
     }
 
     .moduleMenuLinkContainer.moduleMenuOpen {
-        height: auto !important;
-        transform: translateY(-240px);
+        height: 340px !important;
+        transform: translateY(-340px);
     }
 
     .moduleMenuLinkContainer.moduleMenuOpen h2:after {
@@ -422,5 +439,35 @@ ul, menu, dir {
     .moduleMenuLinkContainer.moduleMenuOpen a > span {
         display: block;
         padding: 10px 10px;
+    }
+}
+
+/* Adjust Module Menu Link on small device landscape */
+@media (max-width: 960px) and (max-height: 420px) {
+
+    .moduleMenuLinkContainer {
+        min-height: 45px;
+        height: 45px !important;
+        transform: translateY(calc(-45px));
+        top: 100%;
+    }
+
+    .moduleMenuLinkContainer h2 {
+        height: 33px;
+        padding-top: 5px;
+        margin-top: 5px;
+        transform: translateX(-2px);
+        padding-left: 2vw;
+    }
+
+    .moduleMenuLinkContainer.moduleMenuOpen {
+        height: 140px !important;
+        transform: translateY(-140px);
+        overflow: auto;
+    }
+
+    .moduleMenuLinkContainer.moduleMenuOpen a {
+        height: 33px !important;
+        transition: 0.25s;
     }
 }
