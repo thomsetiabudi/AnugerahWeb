@@ -1,3 +1,55 @@
-<p>
-  komunitas-teens works!
-</p>
+<!-- Content -->
+<div class="moduleContentContainer" id="moduleContentContainer" #moduleContentContainer>
+  <div>
+    <!-- <p class="moduleContentModuleTitle">Teens</p> -->
+    <p class="moduleContentTitle"><span>Teens</span>
+        <a class="socialIconButtonLinkNav" target="_blank" href="https://www.instagram.com/anugerah_teens">
+          <img class="contactSocialIconButtonNav" src="/assets/img/instagram-circle-w.png" alt="IG">
+        </a>
+    </p>
+    <div class="moduleContentContact">
+      <span>CP Dante: </span>
+      <a class="socialIconButtonLinkNav" target="_blank" href="tel:+6289651677355">
+        <img class="contactSocialIconButtonNav" src="/assets/img/telephone-circle-w.png" alt="PH">
+      </a>
+      <a class="socialIconButtonLinkNav" target="_blank" href="https://www.instagram.com/daniel_talenta">
+        <img class="contactSocialIconButtonNav" src="/assets/img/instagram-circle-w.png" alt="IG">
+      </a>
+      <a class="socialIconButtonLinkNav" target="_blank" href="https://wa.me/6289651677355/?text=Halo Dante">
+        <img class="contactSocialIconButtonNav" src="/assets/img/whatsapp-circle-w.png" alt="WA">
+      </a>
+    </div>
+    <div class="moduleContentContact">
+        <span>CP Meilin: </span>
+        <a class="socialIconButtonLinkNav" target="_blank" href="tel:+6281329950005">
+          <img class="contactSocialIconButtonNav" src="/assets/img/telephone-circle-w.png" alt="PH">
+        </a>
+        <a class="socialIconButtonLinkNav" target="_blank" href="https://www.instagram.com/meilinhia">
+          <img class="contactSocialIconButtonNav" src="/assets/img/instagram-circle-w.png" alt="IG">
+        </a>
+        <a class="socialIconButtonLinkNav" target="_blank" href="https://wa.me/6281329950005/?text=Halo Meilin">
+          <img class="contactSocialIconButtonNav" src="/assets/img/whatsapp-circle-w.png" alt="WA">
+        </a>
+      </div>
+    <p class="moduleContentText moduleContentTextHalf">
+      Ibadah teens untuk remaja<br>
+      berusia 13 - 18 tahun<br>
+      08:00<br>
+      Gedung El-Roi Lt. 3<br>
+      GKMI Anugerah Jakarta<br>
+      <br>
+      Anugerah Teens adalah sebuah komunitas anak muda remaja yang memiliki kerinduan untuk belajar menjadi pelaku
+      Firman dan membagi kasih melalui ibadah & akitivitas-aktivitas, serta pendampingan kakak rohani yang berfokus
+      pada keutuhan dan keunikan diri sendiri untuk menjadi pembawa damai dan memuliakan nama Allah.
+    </p>
+  </div>
+</div>
+
+<!-- Module Title -->
+<app-module-vertical-title [moduleTitle]="moduleTitle" #moduleTitleVertical></app-module-vertical-title>
+
+<!-- Module Content Menu Links -->
+<app-module-menu [moduleSectionTitle]="moduleTitle" [moduleMenuLinkList]="moduleMenuLinkList" #moduleMenuLinkContainer></app-module-menu>
+
+<!-- Footer: Logo and Navigation -->
+<app-overlay-menu (activated)="onOverlayMenuActivated($event)" [currentMenu]="currentOverlayMenu"></app-overlay-menu>
