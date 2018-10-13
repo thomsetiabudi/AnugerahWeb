@@ -10,6 +10,8 @@ import { OverlayMenuComponent } from './overlay-menu/overlay-menu.component';
 import { ModuleVerticalTitleComponent } from './module-vertical-title/module-vertical-title.component';
 import { ModuleMenuComponent } from './module-menu/module-menu.component';
 import { GembalaComponent } from './gembala/gembala.component';
+import { GembalaEddyComponent } from './gembala-eddy/gembala-eddy.component';
+import { GembalaPranawaComponent } from './gembala-pranawa/gembala-pranawa.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { GembalaComponent } from './gembala/gembala.component';
     OverlayMenuComponent,
     ModuleVerticalTitleComponent,
     ModuleMenuComponent,
-    GembalaComponent
+    GembalaComponent,
+    GembalaEddyComponent,
+    GembalaPranawaComponent
   ],
   imports: [
     BrowserModule,
