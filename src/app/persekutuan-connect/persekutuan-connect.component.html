@@ -1,3 +1,76 @@
-<p>
-  persekutuan-connect works!
-</p>
+<!-- Content -->
+<div class="moduleContentContainer" id="moduleContentContainer" #moduleContentContainer>
+  <div>
+    <!-- <p class="moduleContentModuleTitle">CONNECT</p> -->
+    <p class="moduleContentTitle"><span>CONNECT</span>
+    </p>
+    <div class="moduleContentContact">
+      <span>CP Dante: </span>
+      <a class="socialIconButtonLinkNav" target="_blank" href="tel:+6289651677355">
+        <img class="contactSocialIconButtonNav" src="/assets/img/telephone-circle-w.png" alt="PH">
+      </a>
+      <a class="socialIconButtonLinkNav" target="_blank" href="https://www.instagram.com/daniel_talenta">
+        <img class="contactSocialIconButtonNav" src="/assets/img/instagram-circle-w.png" alt="IG">
+      </a>
+      <a class="socialIconButtonLinkNav" target="_blank" href="https://wa.me/6289651677355/?text=Halo%20Dante%2C%20tentang%20CONNECT">
+        <img class="contactSocialIconButtonNav" src="/assets/img/whatsapp-circle-w.png" alt="WA">
+      </a>
+    </div>
+
+    <p class="moduleContentText moduleContentTextHalf">
+      CONNECT diadakan dua minggu sekali. CONNECT merupakan suatu komunitas ilahi anak muda dimana sesama anggotanya
+      bisa saling menguatkan / support dalam doa, pujian dan sharing.
+      <br><br>
+      CONNECT Taman Tanah Abang<br>
+      <span>CP Febi: </span>
+      <a class="socialIconButtonLinkNav" target="_blank" href="tel:+62818260666">
+        <img class="contactSocialIconButtonNav" src="/assets/img/telephone-circle-w.png" alt="PH">
+      </a>
+      <a class="socialIconButtonLinkNav" target="_blank" href="https://www.instagram.com/febiolaawww">
+        <img class="contactSocialIconButtonNav" src="/assets/img/instagram-circle-w.png" alt="IG">
+      </a>
+      <a class="socialIconButtonLinkNav" target="_blank" href="https://wa.me/62818260666/?text=Halo%20Febi%2C%20tentang%20CONNECT%20Taman%20Tanah%20Abang%20">
+        <img class="contactSocialIconButtonNav" src="/assets/img/whatsapp-circle-w.png" alt="WA">
+      </a><br>
+      Kamis, Jam 19:00 - 22:00 <br>
+      GKMI Anugerah Jakarta<br>
+      <br>
+      CONNECT Kebun Jeruk<br>
+      <span>CP Andhika: </span>
+      <a class="socialIconButtonLinkNav" target="_blank" href="tel:+6281808240000">
+        <img class="contactSocialIconButtonNav" src="/assets/img/telephone-circle-w.png" alt="PH">
+      </a>
+      <a class="socialIconButtonLinkNav" target="_blank" href="https://www.instagram.com/andhikachrs">
+        <img class="contactSocialIconButtonNav" src="/assets/img/instagram-circle-w.png" alt="IG">
+      </a>
+      <a class="socialIconButtonLinkNav" target="_blank" href="https://wa.me/6281808240000/?text=Halo%20Andhika%2C%20tentang%20CONNECT%20Kebun%20Jeruk">
+        <img class="contactSocialIconButtonNav" src="/assets/img/whatsapp-circle-w.png" alt="WA">
+      </a><br>
+      Jumat, Jam 19:00 - 22:00 <br>
+      Apartment Puri Park View Tower E Lt. 29 No. 9<br>
+      <br>
+      CONNECT Karawaci<br>
+      <span>CP Angel: </span>
+      <a class="socialIconButtonLinkNav" target="_blank" href="tel:+62818706968">
+        <img class="contactSocialIconButtonNav" src="/assets/img/telephone-circle-w.png" alt="PH">
+      </a>
+      <a class="socialIconButtonLinkNav" target="_blank" href="https://www.instagram.com/awinata">
+        <img class="contactSocialIconButtonNav" src="/assets/img/instagram-circle-w.png" alt="IG">
+      </a>
+      <a class="socialIconButtonLinkNav" target="_blank" href="https://wa.me/62818706968/?text=Halo%20Angel%2C%20tentang%20CONNECT%20Karawaci">
+        <img class="contactSocialIconButtonNav" src="/assets/img/whatsapp-circle-w.png" alt="WA">
+      </a><br>
+      Rabu, Jam 19:00 - 22:00 <br>
+      Food Court Supermall Karawaci<br>
+    </p>
+  </div>
+</div>
+
+<!-- Module Title -->
+<app-module-vertical-title [moduleTitle]="moduleTitle" #moduleTitleVertical></app-module-vertical-title>
+
+<!-- Module Content Menu Links -->
+<app-module-menu [moduleSectionTitle]="moduleTitle" [moduleMenuLinkList]="moduleMenuLinkList" #moduleMenuLinkContainer></app-module-menu>
+
+<!-- Footer: Logo and Navigation -->
+<app-overlay-menu (activated)="onOverlayMenuActivated($event)" [currentMenu]="currentOverlayMenu"></app-overlay-menu>

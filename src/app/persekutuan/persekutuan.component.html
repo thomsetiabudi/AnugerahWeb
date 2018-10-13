@@ -1,3 +1,20 @@
-<p>
-  persekutuan works!
-</p>
+<!-- Content -->
+<div class="moduleContentContainer" id="moduleContentContainer" #moduleContentContainer>
+    <div>
+      <!-- <p class="moduleContentModuleTitle">Persekutuan</p> -->
+      <p class="moduleContentTitle">Persekutuan</p>
+      <p class="moduleContentText moduleContentTextHalf">
+        Mari bersekutu bersama dalam Connect dan Persekutuan Wilayah
+      </p>
+    </div>
+  </div>
+  
+  <!-- Module Title -->
+  <app-module-vertical-title [moduleTitle]="moduleTitle" #moduleTitleVertical></app-module-vertical-title>
+  
+  <!-- Module Content Menu Links -->
+  <app-module-menu [moduleSectionTitle]="moduleTitle" [moduleMenuLinkList]="moduleMenuLinkList" #moduleMenuLinkContainer></app-module-menu>
+  
+  <!-- Footer: Logo and Navigation -->
+  <app-overlay-menu (activated)="onOverlayMenuActivated($event)" [currentMenu]="currentOverlayMenu"></app-overlay-menu>
+  

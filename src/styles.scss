@@ -127,6 +127,10 @@ ul, menu, dir {
     overflow: auto;
 }
 
+.moduleContentText > span {
+    vertical-align: top;
+}
+
 .contactSocialIconButtonNav {
     display: inline-block;
     width:25px;
