@@ -31,11 +31,11 @@ export class GembalaComponent implements OnInit {
 
   onOverlayMenuActivated(activated: boolean) {
     if (!activated) {
-      this.moduleContentContainer.toggleHideComponent(false);
+      this.moduleMenuLinkContainer.toggleHideComponent(false);
       this.moduleTitleVertical.toggleHideComponent(false);
       (this.moduleContentContainer.nativeElement as HTMLElement).className = 'moduleContentContainer';
      } else {
-      this.moduleContentContainer.toggleHideComponent(true);
+      this.moduleMenuLinkContainer.toggleHideComponent(true);
       this.moduleTitleVertical.toggleHideComponent(true);
       (this.moduleContentContainer.nativeElement as HTMLElement).className = 'moduleContentContainer hideContent';
      }
