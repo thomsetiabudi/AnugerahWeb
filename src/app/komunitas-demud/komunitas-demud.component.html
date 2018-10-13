@@ -1,3 +1,39 @@
-<p>
-  komunitas-demud works!
-</p>
+<!-- Content -->
+<div class="moduleContentContainer" id="moduleContentContainer" #moduleContentContainer>
+  <div>
+    <!-- <p class="moduleContentModuleTitle">Dewasa Muda</p> -->
+    <p class="moduleContentTitle"><span>Dewasa Muda</span>
+    </p>
+    <div class="moduleContentContact">
+      <span>CP Pujiyanto: </span>
+      <a class="socialIconButtonLinkNav" target="_blank" href="tel:+6281807477240">
+        <img class="contactSocialIconButtonNav" src="/assets/img/telephone-circle-w.png" alt="PH">
+      </a>
+      <a class="socialIconButtonLinkNav" target="_blank" href="https://www.instagram.com/pujiyanto_h">
+        <img class="contactSocialIconButtonNav" src="/assets/img/instagram-circle-w.png" alt="IG">
+      </a>
+      <a class="socialIconButtonLinkNav" target="_blank" href="https://wa.me/6281807477240/?text=Halo Puji">
+        <img class="contactSocialIconButtonNav" src="/assets/img/whatsapp-circle-w.png" alt="WA">
+      </a>
+    </div>
+
+    <p class="moduleContentText moduleContentTextHalf">
+      Dewasa Muda<br>
+      Komunitas Dewasa Muda usia 30 – 40 tahun<br>
+      <br>
+      Dewasa Muda adalah komunitas dewasa usia 30-40. Berfokus pada nilai FIRST, mengajak jemaat usia 30-40 baik dalam
+      keluarga ataupun dunia profesional untuk terus memegang teguh iman (Faith), berelasi dengan dekat (Intimacy),
+      mengerti perannya (Roles), berdampak bagi lingkungan (Social) dan mensyukuri berkat Tuhan (Treasure) sehingga
+      bisa terus berakar, bertumbuh dan berbuah bagi Kristus.
+    </p>
+  </div>
+</div>
+
+<!-- Module Title -->
+<app-module-vertical-title [moduleTitle]="moduleTitle" #moduleTitleVertical></app-module-vertical-title>
+
+<!-- Module Content Menu Links -->
+<app-module-menu [moduleSectionTitle]="moduleTitle" [moduleMenuLinkList]="moduleMenuLinkList" #moduleMenuLinkContainer></app-module-menu>
+
+<!-- Footer: Logo and Navigation -->
+<app-overlay-menu (activated)="onOverlayMenuActivated($event)" [currentMenu]="currentOverlayMenu"></app-overlay-menu>
