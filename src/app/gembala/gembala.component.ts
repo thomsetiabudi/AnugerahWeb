@@ -16,8 +16,11 @@ export class GembalaComponent implements OnInit, AfterViewInit {
   currentOverlayMenu = 'kisah';
   moduleTitle = 'Kisah Kami';
   moduleMenuLinkList: ModuleMenuLink[] = [
-    { title: 'Sejarah', routerLink: '/kisah', isActive: false },
-    { title: 'Gembala Kami', routerLink: '#', isActive: true }
+    { title: 'Sejarah', routerLink: '/kisah', isActive: false, isSubMenu: false },
+    { title: 'Gembala Kami', routerLink: '#', isActive: true, isSubMenu: false },
+    { title: 'Pdt. Febrian C.H', routerLink: '/febrian', isActive: true, isSubMenu: true },
+    { title: 'Pdm. Eddy S.S', routerLink: '/eddy', isActive: false, isSubMenu: true },
+    { title: 'Pdm. E. Pranawa', routerLink: '/pranawa', isActive: false, isSubMenu: true }
   ];
 
   constructor() { }

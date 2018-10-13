@@ -5,7 +5,7 @@
   </h2>
 
   <ng-template ngFor let-moduleMenuLink [ngForOf]="moduleMenuLinkList">
-    <a href='#' routerLink="{{moduleMenuLink.routerLink}}" class="{{!!moduleMenuLink.isActive ? 'moduleMenuLinkActive' : ''}}">
+    <a href='#' routerLink="{{moduleMenuLink.routerLink}}" class="{{!!moduleMenuLink.isActive ? 'moduleMenuLinkActive' : ''}} {{!!moduleMenuLink.isSubMenu ? 'moduleMenuLinkSubMenu' : ''}}">
       <span>{{moduleMenuLink.title}}</span>
     </a>
   </ng-template>

@@ -63,12 +63,20 @@
     transition: 0.25s ease-in-out;
 }
 
+.moduleMenuLinkContainer a.moduleMenuLinkSubMenu > span {
+    margin-left: 4vw !important;
+}
+
 .moduleMenuLinkContainer a.moduleMenuLinkActive > span {
     margin-left: 4vw !important;
     margin-right: 0vw !important;
     transition: 0.25s ease-in-out;
     right: 2vw;
     transform: translateX(0vw) translateY(-50%);
+}
+
+.moduleMenuLinkContainer a.moduleMenuLinkActive.moduleMenuLinkSubMenu > span {
+    margin-left: 6vw !important;
 }
 
 .moduleMenuLinkContainer a:before {
@@ -85,6 +93,10 @@
     transition: 0.25s ease-in-out;
 }
 
+.moduleMenuLinkContainer a.moduleMenuLinkSubMenu:before {
+    left: 4vw;
+}
+
 .moduleMenuLinkContainer a.moduleMenuLinkActive:before, .moduleMenuLinkContainer a:hover:before {
     width: 1vw;
     transition: 0.25s ease-in-out;
@@ -94,6 +106,10 @@
     margin-left: 4vw !important;
     margin-right: 0vw !important;
     transition: 0.25s ease-in-out;
+}
+
+.moduleMenuLinkContainer a.moduleMenuLinkSubMenu:hover span {
+    margin-left: 6vw !important;
 }
 
 .moduleMenuLinkContainer a:after {

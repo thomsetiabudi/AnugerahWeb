@@ -16,8 +16,8 @@ export class KisahComponent implements OnInit, AfterViewInit {
   currentOverlayMenu = 'kisah';
   moduleTitle = 'Kisah Kami';
   moduleMenuLinkList: ModuleMenuLink[] = [
-    { title: 'Sejarah', routerLink: '/kisah', isActive: true },
-    { title: 'Gembala Kami', routerLink: '/kisah/gembala', isActive: false }
+    { title: 'Sejarah', routerLink: '/kisah', isActive: true, isSubMenu: false },
+    { title: 'Gembala Kami', routerLink: '/kisah/gembala', isActive: false, isSubMenu: false }
   ];
 
   constructor() { }

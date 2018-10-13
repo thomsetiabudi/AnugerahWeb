@@ -74,8 +74,8 @@ ul, menu, dir {
 .moduleContentContainer {
     width: 50%;
     position: absolute !important;
-    top: 50% !important;
-    transform: translateY(-50%) !important;
+    top: 52% !important;
+    transform: translateY(-48%) !important;
     z-index: 30;
     left: 7vw !important;
     display: block;
@@ -92,7 +92,7 @@ ul, menu, dir {
 }
 
 .moduleContentModuleTitle {
-    display: none;
+    display: block;
 }
 
 .moduleContentTitle {
@@ -103,6 +103,17 @@ ul, menu, dir {
 .moduleContentText {
     max-height: 50vh;
     overflow: auto;
+}
+
+// .moduleContentText.moduleContentTextHalf {
+//     max-width: 518px;
+// }
+
+.contactSocialIconButtonNav {
+    display: inline-block;
+    width:25px;
+    height:25px;
+    margin-right: 10px;
 }
 
 .moduleContentText::-webkit-scrollbar {
