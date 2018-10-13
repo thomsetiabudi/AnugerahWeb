@@ -121,10 +121,6 @@ ul, menu, dir {
     overflow: auto;
 }
 
-// .moduleContentText.moduleContentTextHalf {
-//     max-width: 518px;
-// }
-
 .contactSocialIconButtonNav {
     display: inline-block;
     width:25px;
@@ -196,8 +192,8 @@ ul, menu, dir {
     .moduleContentContainer {
         width: 85%;
         position: absolute !important;
-        top: 45% !important;
-        transform: translateY(-55%) !important;
+        top: 47% !important;
+        transform: translateY(-53%) !important;
         z-index: 30;
         left: 7vw !important;
     }
@@ -213,6 +209,12 @@ ul, menu, dir {
     .moduleContentText {
         max-height: 30vh;
         overflow: auto;
+    }
+
+    .moduleContentContainer > div p {
+        font-size: 11px;
+        letter-spacing: 0.75px;
+        line-height: 1.2em;
     }
 }
 
