@@ -1,8 +1,8 @@
 <div class="logoAndMenu" #logoAndMenuContainer>
-  <a href="#" id="logo" class="mainLogo">
+  <a href="#" routerLink='/home' id="logo" class="mainLogo">
     <img src="/assets/logoAnugerah.png" class="cu-logo" alt="GKMI Anugerah">
   </a>
-  <a href="#" id="logoicon" class="mainLogoIcon">
+  <a href="#" routerLink='/home' id="logoicon" class="mainLogoIcon">
     <img src="/assets/logo-sm-bw.png" class="cu-logo-small" alt="G">
   </a>
   <a class="menuButton" (click)="onMenuButtonClick()" #menuButton>
@@ -38,7 +38,7 @@
     <div id="menuListContainer">
       <ul id="menuList" class="menuList">
         <li [className]="home_class">
-          <a href="#">Home</a>
+          <a routerLink='/home' href="#">Home</a>
         </li>
         <li [className]="kisah_class">
           <a routerLink='/kisah' href="#">Kisah Kami</a>

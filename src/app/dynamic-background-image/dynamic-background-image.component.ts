@@ -52,14 +52,10 @@ export class DynamicBackgroundImageComponent implements OnInit, AfterViewInit {
       backgroundImageIndex = backgroundImageIndex + 2;
       firstLoad = false;
     } else {
-      console.log((this.backgroundImage1.nativeElement as HTMLElement).className);
-
       if ((this.backgroundImage1.nativeElement as HTMLElement).className === 'bg-img-home fade-out') {
-        console.log('hide 2, show 1');
         (this.backgroundImage2.nativeElement as HTMLElement).className = 'bg-img-home fade-out';
         (this.backgroundImage1.nativeElement as HTMLElement).className = 'bg-img-home';
         setTimeout(() => {
-          console.log('change URL 2');
           (this.backgroundImage2.nativeElement as HTMLElement).style.backgroundImage =
             'url(' + backgroundImageList[backgroundImageIndex] + ')';
           backgroundImageIndex = backgroundImageIndex + 1;
@@ -68,11 +64,9 @@ export class DynamicBackgroundImageComponent implements OnInit, AfterViewInit {
           }
         }, 2000);
       } else {
-        console.log('hide 1, show 2');
         (this.backgroundImage1.nativeElement as HTMLElement).className = 'bg-img-home fade-out';
         (this.backgroundImage2.nativeElement as HTMLElement).className = 'bg-img-home';
         setTimeout(() => {
-          console.log('change URL 1: ' + backgroundImageList[backgroundImageIndex]);
           (this.backgroundImage1.nativeElement as HTMLElement).style.backgroundImage =
             'url(' + backgroundImageList[backgroundImageIndex] + ')';
           backgroundImageIndex = backgroundImageIndex + 1;

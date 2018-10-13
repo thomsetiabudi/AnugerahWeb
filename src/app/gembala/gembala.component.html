@@ -1,0 +1,31 @@
+<!-- Content -->
+<div class="moduleContentContainer" id="moduleContentContainer" #moduleContentContainer>
+  <div>
+    <p class="moduleContentModuleTitle">Kisah Kami</p>
+    <p class="moduleContentTitle">Gembala Kami</p>
+    <p class="moduleContentText">
+      Sebagai Gembala Jemaat, saya rindu GKMI Anugerah menjadi gereja yang menyadari bahwa mempersiapkan generasi
+      penerus adalah tugas penting, karena tugas ini menentukan masa depan. Ada ungkapan bahwa ”masa kini ditentukan
+      oleh masa lalu, sedangkan masa kini menentukan masa depan”. Masa lalu tidak akan pernah bisa diubah, tetapi
+      tindakan kita di masa kini menentukan masa depan kita. Itulah sebabnya keluarga, khususnya para orang tua bersama
+      gereja, harus sungguh-sungguh mempersiapkan generasi penerusnya mulai dari sekarang. Hal ini menentukan masa
+      depan. Pertama, masa depan generasi penerus itu sendiri. Kedua, masa depan gereja. Ketiga, masa depan bangsa ini.
+      Siapakah pemimpin-pemimpin gereja di masa depan? Mereka adalah anak-anak kita yang saat ini masih ada di sekolah
+      minggu, di kebaktian remaja dan pemuda. Sepuluh atau dua puluh tahun yang akan datang merekalah pemimpin-pemimpin
+      gereja masa depan yang akan melanjutkan tongkat estafet kepemimpinan di gereja ini. Seperti kata pepatah: "Gagal
+      mempersiapkan diri sama dengan mempersiapkan diri untuk gagal." Untuk gereja berlaku hal yang sama; ketika gereja
+      gagal mempersiapkan masa depan dirinya itu berarti gereja sedang mempersiapkan dirinya untuk gagal di masa depan.
+      Mempersiapkan next generation (generasi mendatang), berarti mempersiapkan masa depan gereja dan gereja masa
+      depan, Amin.
+    </p>
+  </div>
+</div>
+
+<!-- Module Title -->
+<app-module-vertical-title [moduleTitle]="moduleTitle" #moduleTitleVertical></app-module-vertical-title>
+
+<!-- Module Content Menu Links -->
+<app-module-menu [moduleSectionTitle]="moduleTitle" [moduleMenuLinkList]="moduleMenuLinkList" #moduleMenuLinkContainer></app-module-menu>
+
+<!-- Footer: Logo and Navigation -->
+<app-overlay-menu (activated)="onOverlayMenuActivated($event)" [currentMenu]="currentOverlayMenu"></app-overlay-menu>

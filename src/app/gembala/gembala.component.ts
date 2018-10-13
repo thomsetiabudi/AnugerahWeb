@@ -4,11 +4,11 @@ import { ModuleMenuComponent } from '../module-menu/module-menu.component';
 import { ModuleMenuLink } from '../module-menu-link';
 
 @Component({
-  selector: 'app-kisah',
-  templateUrl: './kisah.component.html',
-  styleUrls: ['./kisah.component.css']
+  selector: 'app-gembala',
+  templateUrl: './gembala.component.html',
+  styleUrls: ['./gembala.component.scss']
 })
-export class KisahComponent implements OnInit, AfterViewInit {
+export class GembalaComponent implements OnInit, AfterViewInit {
   @ViewChild('moduleTitleVertical') moduleTitleVertical: ModuleVerticalTitleComponent;
   @ViewChild('moduleMenuLinkContainer') moduleMenuLinkContainer: ModuleMenuComponent;
   @ViewChild('moduleContentContainer') moduleContentContainer: any;
@@ -16,8 +16,8 @@ export class KisahComponent implements OnInit, AfterViewInit {
   currentOverlayMenu = 'kisah';
   moduleTitle = 'Kisah Kami';
   moduleMenuLinkList: ModuleMenuLink[] = [
-    { title: 'Sejarah', routerLink: '/kisah', isActive: true },
-    { title: 'Gembala Kami', routerLink: '/kisah/gembala', isActive: false }
+    { title: 'Sejarah', routerLink: '/kisah', isActive: false },
+    { title: 'Gembala Kami', routerLink: '#', isActive: true }
   ];
 
   constructor() { }
@@ -41,4 +41,3 @@ export class KisahComponent implements OnInit, AfterViewInit {
      }
   }
 }
-

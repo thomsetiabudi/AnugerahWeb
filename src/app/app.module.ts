@@ -9,6 +9,7 @@ import { DynamicBackgroundImageComponent } from './dynamic-background-image/dyna
 import { OverlayMenuComponent } from './overlay-menu/overlay-menu.component';
 import { ModuleVerticalTitleComponent } from './module-vertical-title/module-vertical-title.component';
 import { ModuleMenuComponent } from './module-menu/module-menu.component';
+import { GembalaComponent } from './gembala/gembala.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ModuleMenuComponent } from './module-menu/module-menu.component';
     DynamicBackgroundImageComponent,
     OverlayMenuComponent,
     ModuleVerticalTitleComponent,
-    ModuleMenuComponent
+    ModuleMenuComponent,
+    GembalaComponent
   ],
   imports: [
     BrowserModule,
