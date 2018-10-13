@@ -17,7 +17,7 @@ export class PersekutuanConnectComponent implements OnInit {
   moduleTitle = 'Persekutuan';
   moduleMenuLinkList: ModuleMenuLink[] = [
     { title: 'Connect', routerLink: '/persekutuan/connect', isActive: true, isSubMenu: false },
-    { title: 'Persekutuan Wilayah', routerLink: '/komunitas/pw', isActive: false, isSubMenu: false }
+    { title: 'Persekutuan Wilayah', routerLink: '/persekutuan/pw', isActive: false, isSubMenu: false }
   ];
 
   constructor() { }
