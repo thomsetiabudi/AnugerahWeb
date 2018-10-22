@@ -142,7 +142,7 @@
         margin: 0;
         width: 100vw;
         min-height: 84px;
-        height: 84px !important;
+        height: 168px !important;
         overflow: auto;
         background: white;
         transform: translateY(calc(-84px));
@@ -265,7 +265,7 @@
 
     .moduleMenuLinkContainer {
         min-height: 45px;
-        height: 45px !important;
+        height: 168px !important;
         transform: translateY(calc(-45px));
         top: 100%;
     }
@@ -279,7 +279,7 @@
     }
 
     .moduleMenuLinkContainer.moduleMenuOpen {
-        height: 140px !important;
+        height: 168px !important;
         transform: translateY(-140px);
         overflow: auto;
     }
