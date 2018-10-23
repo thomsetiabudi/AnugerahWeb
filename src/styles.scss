@@ -123,6 +123,7 @@ ul, menu, dir {
 }
 
 .moduleContentText {
+    margin-top: 7px;
     max-height: 50vh;
     overflow: auto;
 }
@@ -136,6 +137,8 @@ ul, menu, dir {
     width:25px;
     height:25px;
     margin-right: 10px;
+    margin-top: 7px;
+    margin-bottom: 7px;
 }
 
 .moduleContentText::-webkit-scrollbar {
@@ -195,7 +198,7 @@ ul, menu, dir {
     }
 
     .moduleContentText {
-        max-height: 50vh;
+        max-height: 45vh;
         overflow: auto;
     }
 }
@@ -203,7 +206,7 @@ ul, menu, dir {
 /* Adjust Module Content on small device super short */
 @media (max-width: 960px) and (max-height: 460px) {
     .moduleContentText {
-        max-height: 40vh;
+        max-height: 38vh;
         overflow: auto;
     }
 }
