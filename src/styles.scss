@@ -85,17 +85,17 @@ ul, menu, dir {
 .moduleContentContainer {
     width: 50%;
     position: absolute !important;
-    top: 52% !important;
-    transform: translateY(-48%) !important;
+    top: 53% !important;
+    transform: translateY(-47%) !important;
     z-index: 30;
     left: 7vw !important;
     display: block;
     transition: 0.5s ease-in-out;
 }
 
-.moduleContentContainer > div p {
+.moduleContentContainer > div p, .moduleContentContainer > div div.moduleContentText {
     color: #fff;
-    font-size: 13px;
+    font-size: 12px;
     letter-spacing: 0.75px;
     line-height: 1.6em;
     text-align: justify;
@@ -123,9 +123,10 @@ ul, menu, dir {
 }
 
 .moduleContentText {
-    margin-top: 7px;
+    margin-top: 15px;
     max-height: 50vh;
     overflow: auto;
+    padding-right: 3px;
 }
 
 .moduleContentText > span {
@@ -137,8 +138,10 @@ ul, menu, dir {
     width:25px;
     height:25px;
     margin-right: 10px;
-    margin-top: 7px;
-    margin-bottom: 7px;
+}
+
+.bottomSocialIconButtonContainer {
+    margin-top: 25px;
 }
 
 .moduleContentText::-webkit-scrollbar {
@@ -146,14 +149,14 @@ ul, menu, dir {
 }
 
 .moduleContentText::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3);
-    box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3); 
+    -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.1); 
     border-radius: 1px;
 }
 
 .moduleContentText::-webkit-scrollbar-thumb {
-    -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3);
-    box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.3); 
+    -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 1);
+    box-shadow: inset 0 0 6px rgba(255, 255, 255, 1); 
     border-radius: 1px;
 }
 
@@ -166,6 +169,61 @@ ul, menu, dir {
     margin-bottom: 5px;
     vertical-align: top;
     animation: 1.5s ease-out 0s 1 slideInFromRight;
+}
+
+.moduleContentTextContactList {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.moduleContentTextContactItem {
+    margin-top: 5px;
+    width: 50%;
+}
+
+.moduleContentTextContactItem:nth-child(even) {
+    padding-left: 0px;
+}
+
+.moduleContentTextContactItem:first-child::before, .moduleContentTextContactItem:nth-child(2)::before {
+    content: '';
+    display: block;
+    position: relative;
+    width: 65px;
+    left: 0;
+    margin-bottom: 10px;
+    border-bottom: 0px solid white;
+}
+
+.moduleContentTextContactItem::before {
+    content: '';
+    display: block;
+    position: relative;
+    width: 65px;
+    left: 0;
+    margin-bottom: 10px;
+    border-bottom: 2px solid white;
+}
+
+.moduleContentTextContactItem > span {
+    vertical-align: top;
+}
+
+.moduleContentTextContactItemLine {
+    line-height: 2em;
+}
+
+.moduleContentTextContactItemLine.cp {
+    display: inline-block;
+    min-width: 140px;
+    width: 140px;
+    max-width: 140px;
+}
+
+.moduleContentTextContactItemLine.cpshort {
+    min-width: 90px;
+    width: 90px;
+    max-width: 90px;
 }
 
 /* Adjust Module Content on small device */
@@ -198,16 +256,46 @@ ul, menu, dir {
     }
 
     .moduleContentText {
-        max-height: 45vh;
+        max-height: 40vh;
         overflow: auto;
+        margin-top: 10px;
     }
+
+    .bottomSocialIconButtonContainer {
+        margin-top: 10px;
+    }
+    
+    .moduleContentContainer > div p {
+        font-size: 11px;
+    }
+
+    .moduleContentTextContactItem {
+        width: 100%;
+    }
+
+    .moduleContentTextContactItem:nth-child(even) {
+        padding-left: 0px;
+    }
+
+    .moduleContentTextContactItem:nth-child(2)::before {
+        border-bottom: 2px solid white;
+    }
+    
 }
 
 /* Adjust Module Content on small device super short */
 @media (max-width: 960px) and (max-height: 460px) {
     .moduleContentText {
-        max-height: 38vh;
+        max-height: 33vh;
         overflow: auto;
+    }
+
+    .bottomSocialIconButtonContainer {
+        margin-top: 10px;
+    }
+    
+    .moduleContentContainer > div p {
+        font-size: 11px;
     }
 }
 
@@ -245,7 +333,13 @@ ul, menu, dir {
 /* Adjust Module Content on small device landscape */
 @media (max-width: 960px) and (max-height: 210px) {
     .moduleContentText {
-        max-height: 20vh;
+        max-height: 15vh;
         overflow: auto;
+    }
+
+    .moduleContentContainer > div p {
+        font-size: 9px;
+        letter-spacing: 0.5px;
+        line-height: 1.2em;
     }
 }
