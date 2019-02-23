@@ -17,6 +17,7 @@ export class GembalaComponent implements OnInit {
   moduleTitle = 'Kisah Kami';
   moduleMenuLinkList: ModuleMenuLink[] = [
     { title: 'Sejarah', routerLink: '/kisah', isActive: false, isSubMenu: false },
+    { title: 'Visi', routerLink: '/kisah/visi', isActive: false, isSubMenu: false },
     { title: 'Gembala Kami', routerLink: '#', isActive: true, isSubMenu: false },
     { title: 'Pdt. Febrian C.H', routerLink: '/kisah/gembala/febrian', isActive: true, isSubMenu: true },
     { title: 'Pdm. Eddy S.S', routerLink: '/kisah/gembala/eddy', isActive: false, isSubMenu: true },

@@ -15,19 +15,21 @@ import { KomunitasTeensComponent } from './komunitas-teens/komunitas-teens.compo
 import { KomunitasYouthComponent } from './komunitas-youth/komunitas-youth.component';
 import { KomunitasDemudComponent } from './komunitas-demud/komunitas-demud.component';
 import { KomunitasExcellentComponent } from './komunitas-excellent/komunitas-excellent.component';
+import { VisiComponent } from './visi/visi.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
   { path: 'kisah', component: KisahComponent },
+  { path: 'kisah/visi', component: VisiComponent },
   { path: 'kisah/sejarah', component: KisahComponent },
   { path: 'kisah/gembala', component: GembalaComponent },
   { path: 'kisah/gembala/febrian', component: GembalaComponent },
   { path: 'kisah/gembala/eddy', component: GembalaEddyComponent },
   { path: 'kisah/gembala/pranawa', component: GembalaPranawaComponent },
   { path: 'connect', component: PersekutuanComponent },
-  { path: 'persekutuan/connect', component: PersekutuanConnectComponent },
-  { path: 'persekutuan/pw', component: PersekutuanPwComponent },
+  { path: 'connect/youth', component: PersekutuanConnectComponent },
+  { path: 'connect/connect', component: PersekutuanPwComponent },
   { path: 'komunitas', component: KomunitasComponent },
   { path: 'komunitas/kids', component: KomunitasKidsComponent },
   { path: 'komunitas/teens', component: KomunitasTeensComponent },

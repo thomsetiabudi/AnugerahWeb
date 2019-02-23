@@ -13,11 +13,11 @@ export class PersekutuanConnectComponent implements OnInit {
   @ViewChild('moduleMenuLinkContainer') moduleMenuLinkContainer: ModuleMenuComponent;
   @ViewChild('moduleContentContainer') moduleContentContainer: any;
 
-  currentOverlayMenu = 'persekutuan';
-  moduleTitle = 'Persekutuan';
+  currentOverlayMenu = 'connect';
+  moduleTitle = 'CONNECT (Youth)';
   moduleMenuLinkList: ModuleMenuLink[] = [
-    { title: 'Connect', routerLink: '/persekutuan/connect', isActive: true, isSubMenu: false },
-    { title: 'Persekutuan Wilayah', routerLink: '/persekutuan/pw', isActive: false, isSubMenu: false }
+    { title: 'Connect (Youth)', routerLink: '/connect/youth', isActive: true, isSubMenu: false },
+    { title: 'CONNECT', routerLink: '/connect/connect', isActive: false, isSubMenu: false }
   ];
 
   constructor() { }

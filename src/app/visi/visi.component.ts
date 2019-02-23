@@ -1,29 +1,33 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { ModuleVerticalTitleComponent } from '../module-vertical-title/module-vertical-title.component';
 import { ModuleMenuComponent } from '../module-menu/module-menu.component';
 import { ModuleMenuLink } from '../module-menu-link';
 
 @Component({
-  selector: 'app-persekutuan-pw',
-  templateUrl: './persekutuan-pw.component.html',
-  styleUrls: ['./persekutuan-pw.component.scss']
+  selector: 'app-visi',
+  templateUrl: './visi.component.html',
+  styleUrls: ['./visi.component.css']
 })
-export class PersekutuanPwComponent implements OnInit {
+export class VisiComponent implements OnInit, AfterViewInit {
   @ViewChild('moduleTitleVertical') moduleTitleVertical: ModuleVerticalTitleComponent;
   @ViewChild('moduleMenuLinkContainer') moduleMenuLinkContainer: ModuleMenuComponent;
   @ViewChild('moduleContentContainer') moduleContentContainer: any;
 
-  currentOverlayMenu = 'connect';
-  moduleTitle = 'CONNECT';
+  currentOverlayMenu = 'kisah';
+  moduleTitle = 'Kisah Kami';
   moduleMenuLinkList: ModuleMenuLink[] = [
-    { title: 'Connect (Youth)', routerLink: '/connect/youth', isActive: false, isSubMenu: false },
-    { title: 'CONNECT', routerLink: '/connect/connect', isActive: true, isSubMenu: false }
+    { title: 'Sejarah', routerLink: '/kisah', isActive: false, isSubMenu: false },
+    { title: 'Visi', routerLink: '/kisah/visi', isActive: true, isSubMenu: false },
+    { title: 'Gembala Kami', routerLink: '/kisah/gembala', isActive: false, isSubMenu: false }
   ];
 
   constructor() { }
 
   ngOnInit() {
 
+  }
+
+  ngAfterViewInit() {
   }
 
   onOverlayMenuActivated(activated: boolean) {
