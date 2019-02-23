@@ -13,8 +13,8 @@ export class PersekutuanComponent implements OnInit {
   @ViewChild('moduleMenuLinkContainer') moduleMenuLinkContainer: ModuleMenuComponent;
   @ViewChild('moduleContentContainer') moduleContentContainer: any;
 
-  currentOverlayMenu = 'persekutuan';
-  moduleTitle = 'Persekutuan';
+  currentOverlayMenu = 'connect';
+  moduleTitle = 'CONNECT';
   moduleMenuLinkList: ModuleMenuLink[] = [
     { title: 'Connect', routerLink: '/persekutuan/connect', isActive: false, isSubMenu: false },
     { title: 'Persekutuan Wilayah', routerLink: '/persekutuan/pw', isActive: false, isSubMenu: false }

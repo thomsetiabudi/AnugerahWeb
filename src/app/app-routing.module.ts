@@ -25,7 +25,7 @@ const routes: Routes = [
   { path: 'kisah/gembala/febrian', component: GembalaComponent },
   { path: 'kisah/gembala/eddy', component: GembalaEddyComponent },
   { path: 'kisah/gembala/pranawa', component: GembalaPranawaComponent },
-  { path: 'persekutuan', component: PersekutuanComponent },
+  { path: 'connect', component: PersekutuanComponent },
   { path: 'persekutuan/connect', component: PersekutuanConnectComponent },
   { path: 'persekutuan/pw', component: PersekutuanPwComponent },
   { path: 'komunitas', component: KomunitasComponent },

@@ -36,7 +36,7 @@ export class OverlayMenuComponent implements OnInit, AfterViewInit {
       this.kisah_class = this.defaultMenuItemClass;
       this.komunitas_class = this.defaultMenuItemClass + ' currentMenuItem';
       this.persekutuan_class = this.defaultMenuItemClass;
-    } else if (this.currentMenu === 'persekutuan') {
+    } else if (this.currentMenu === 'connect') {
       this.home_class = this.defaultMenuItemClass;
       this.kisah_class = this.defaultMenuItemClass;
       this.komunitas_class = this.defaultMenuItemClass;
