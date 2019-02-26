@@ -93,6 +93,16 @@ ul, menu, dir {
     transition: 0.5s ease-in-out;
 }
 
+.moduleContentContainer > div h1 {
+    color: #fff;
+    font-size: 11px;
+    letter-spacing: 0.75px;
+    line-height: 1.6em;
+    text-align: justify;
+    margin-bottom: 5px;
+    animation: 1.5s ease-out 0s 1 slideInFromRight;
+}
+
 .moduleContentContainer > div p, .moduleContentContainer > div div.moduleContentText {
     color: #fff;
     font-size: 11px;
@@ -109,6 +119,10 @@ ul, menu, dir {
 
 .moduleContentModuleTitle {
     display: block;
+}
+
+h1.moduleContentTitle {
+    font-weight: normal !important;
 }
 
 .moduleContentTitle {
