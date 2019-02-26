@@ -22,6 +22,7 @@ import { KomunitasYouthComponent } from './komunitas-youth/komunitas-youth.compo
 import { KomunitasDemudComponent } from './komunitas-demud/komunitas-demud.component';
 import { KomunitasExcellentComponent } from './komunitas-excellent/komunitas-excellent.component';
 import { KomunitasPremiumComponent } from './komunitas-premium/komunitas-premium.component';
+import { VisiComponent } from './visi/visi.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { KomunitasPremiumComponent } from './komunitas-premium/komunitas-premium
     KomunitasYouthComponent,
     KomunitasDemudComponent,
     KomunitasExcellentComponent,
-    KomunitasPremiumComponent
+    KomunitasPremiumComponent,
+    VisiComponent
   ],
   imports: [
     BrowserModule,
