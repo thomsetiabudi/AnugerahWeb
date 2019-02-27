@@ -1,4 +1,6 @@
 import { Component, OnInit, ViewChild, AfterViewInit, HostListener } from '@angular/core';
+import { SeoService } from '../seo.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -11,9 +13,13 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   currentOverlayMenu = 'home';
 
-  constructor() { }
+  constructor(private route: ActivatedRoute, private _seoService: SeoService) { }
 
   ngOnInit() {
+    console.log('Home NavigationEnd:', this.route.snapshot.data['title']);
+    this._seoService.updateTitle(this.route.snapshot.data['title']);
+    this._seoService.updateOgUrl(this.route.snapshot.data['ogUrl']);
+    this._seoService.updateDescription(this.route.snapshot.data['description']);
   }
 
   ngAfterViewInit() {

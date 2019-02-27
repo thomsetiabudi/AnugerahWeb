@@ -19,7 +19,13 @@ import { VisiComponent } from './visi/visi.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'home', component: HomeComponent },
+  { path: 'home', component: HomeComponent,
+    data: {
+      title: 'GKMI Anugerah',
+      description: 'Menjadi komunitas murid Kristus yang bersaksi',
+      ogUrl: 'https://gkmi-anugerah.org'
+    }
+  },
   { path: 'kisah', component: KisahComponent },
   { path: 'kisah/visi', component: VisiComponent },
   { path: 'kisah/sejarah', component: KisahComponent },
@@ -27,7 +33,13 @@ const routes: Routes = [
   { path: 'kisah/gembala/febrian', component: GembalaComponent },
   { path: 'kisah/gembala/eddy', component: GembalaEddyComponent },
   { path: 'kisah/gembala/pranawa', component: GembalaPranawaComponent },
-  { path: 'connect', component: PersekutuanComponent },
+  { path: 'connect', component: PersekutuanComponent,
+    data: {
+      title: 'CONNECT',
+      description: 'CONNECT GKMI Anugerah',
+      ogUrl: 'https://gkmi-anugerah.org/connect'
+    }
+  },
   { path: 'connect/youth', component: PersekutuanConnectComponent },
   { path: 'connect/connect', component: PersekutuanPwComponent },
   { path: 'komunitas', component: KomunitasComponent },
