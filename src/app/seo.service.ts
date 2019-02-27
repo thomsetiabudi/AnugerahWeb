@@ -10,6 +10,7 @@ export class SeoService {
 
   updateTitle(title: string) {
     this.title.setTitle(title);
+    this.meta.updateTag({ name: 'og:title', content: title });
   }
 
   updateOgUrl(url: string) {
@@ -18,6 +19,7 @@ export class SeoService {
 
   updateDescription(desc: string) {
     this.meta.updateTag({ name: 'description', content: desc });
+    this.meta.updateTag({ name: 'og:description', content: desc });
   }
 
 }

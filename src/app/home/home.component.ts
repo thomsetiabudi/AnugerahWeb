@@ -16,7 +16,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
   constructor(private route: ActivatedRoute, private _seoService: SeoService) { }
 
   ngOnInit() {
-    console.log('Home NavigationEnd:', this.route.snapshot.data['title']);
     this._seoService.updateTitle(this.route.snapshot.data['title']);
     this._seoService.updateOgUrl(this.route.snapshot.data['ogUrl']);
     this._seoService.updateDescription(this.route.snapshot.data['description']);

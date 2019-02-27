@@ -2,6 +2,8 @@ import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { ModuleVerticalTitleComponent } from '../module-vertical-title/module-vertical-title.component';
 import { ModuleMenuComponent } from '../module-menu/module-menu.component';
 import { ModuleMenuLink } from '../module-menu-link';
+import { SeoService } from '../seo.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-visi',
@@ -21,10 +23,12 @@ export class VisiComponent implements OnInit, AfterViewInit {
     { title: 'Gembala Kami', routerLink: '/kisah/gembala', isActive: false, isSubMenu: false }
   ];
 
-  constructor() { }
+  constructor(private route: ActivatedRoute, private _seoService: SeoService) { }
 
   ngOnInit() {
-
+    this._seoService.updateTitle(this.route.snapshot.data['title']);
+    this._seoService.updateOgUrl(this.route.snapshot.data['ogUrl']);
+    this._seoService.updateDescription(this.route.snapshot.data['description']);
   }
 
   ngAfterViewInit() {
