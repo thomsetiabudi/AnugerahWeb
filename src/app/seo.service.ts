@@ -10,16 +10,16 @@ export class SeoService {
 
   updateTitle(title: string) {
     this.title.setTitle(title);
-    this.meta.updateTag({ name: 'og:title', content: title });
+    this.meta.updateTag({ property: 'og:title', content: title });
   }
 
   updateOgUrl(url: string) {
-    this.meta.updateTag({ name: 'og:url', content: url });
+    this.meta.updateTag({ property: 'og:url', content: url });
   }
 
   updateDescription(desc: string) {
-    this.meta.updateTag({ name: 'description', content: desc });
-    this.meta.updateTag({ name: 'og:description', content: desc });
+    this.meta.updateTag({ property: 'description', content: desc });
+    this.meta.updateTag({ property: 'og:description', content: desc });
   }
 
 }
