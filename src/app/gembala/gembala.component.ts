@@ -22,9 +22,17 @@ export class GembalaComponent implements OnInit {
     { title: 'Visi', routerLink: '/kisah/visi', isActive: false, isSubMenu: false },
     { title: 'Gembala Kami', routerLink: '#', isActive: true, isSubMenu: false },
     { title: 'Pdt. Febrian C.H', routerLink: '/kisah/gembala/febrian', isActive: true, isSubMenu: true },
-    { title: 'Pdm. Eddy S.S', routerLink: '/kisah/gembala/eddy', isActive: false, isSubMenu: true },
     { title: 'Pdm. E. Pranawa', routerLink: '/kisah/gembala/pranawa', isActive: false, isSubMenu: true }
   ];
+
+  whatsappLinkPrefix = '';
+  whatsapplinkText = '';
+
+  desktopWhatsappLinkPrefix = 'https://web.whatsapp.com/send?phone=';
+  desktopWhatsapplinkText = '&text=';
+
+  mobileWhatsappLinkPrefix = 'https://wa.me/';
+  mobileWhatsapplinkText = '/?text=';
 
   constructor(private route: ActivatedRoute, private _seoService: SeoService) { }
 
@@ -32,6 +40,16 @@ export class GembalaComponent implements OnInit {
     this._seoService.updateTitle(this.route.snapshot.data['title']);
     this._seoService.updateOgUrl(this.route.snapshot.data['ogUrl']);
     this._seoService.updateDescription(this.route.snapshot.data['description']);
+
+    setTimeout(() => {
+      if (window.innerWidth <= 960) {
+        this.whatsappLinkPrefix = this.mobileWhatsappLinkPrefix;
+        this.whatsapplinkText = this.mobileWhatsapplinkText;
+      } else {
+        this.whatsappLinkPrefix = this.desktopWhatsappLinkPrefix;
+        this.whatsapplinkText = this.desktopWhatsapplinkText;
+      }
+    }, 500);
   }
 
   onOverlayMenuActivated(activated: boolean) {

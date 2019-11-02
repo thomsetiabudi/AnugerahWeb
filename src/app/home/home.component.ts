@@ -12,6 +12,14 @@ export class HomeComponent implements OnInit, AfterViewInit {
   @ViewChild('homeMenuLinkContainer') homeMenuLinkContainer: any;
 
   currentOverlayMenu = 'home';
+  whatsappLinkPrefix = '';
+  whatsapplinkText = '';
+
+  desktopWhatsappLinkPrefix = 'https://web.whatsapp.com/send?phone=';
+  desktopWhatsapplinkText = '&text=';
+
+  mobileWhatsappLinkPrefix = 'https://wa.me/';
+  mobileWhatsapplinkText = '/?text=';
 
   constructor(private route: ActivatedRoute, private _seoService: SeoService) { }
 
@@ -24,10 +32,16 @@ export class HomeComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     setTimeout(() => {
       if (window.innerWidth <= 960) {
+        this.whatsappLinkPrefix = this.mobileWhatsappLinkPrefix;
+        this.whatsapplinkText = this.mobileWhatsapplinkText;
+
         const topValue = Math.round(window.innerHeight * 0.75);
         const heightValue = window.innerHeight - topValue;
         this.homeMenuLinkContainer.nativeElement.style = 'top: ' + topValue + 'px; height: ' + heightValue + 'px;';
       } else {
+        this.whatsappLinkPrefix = this.desktopWhatsappLinkPrefix;
+        this.whatsapplinkText = this.desktopWhatsapplinkText;
+
         this.homeMenuLinkContainer.nativeElement.style = '';
       }
     }, 500);
@@ -51,11 +65,17 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
     setTimeout(() => {
       if (window.innerWidth <= 960) {
+        this.whatsappLinkPrefix = this.mobileWhatsappLinkPrefix;
+        this.whatsapplinkText = this.mobileWhatsapplinkText;
+
         const topValue = Math.round(window.innerHeight * 0.75);
         const heightValue = window.innerHeight - topValue;
         this.homeMenuLinkContainer.nativeElement.style = 'top: ' + topValue + 'px; height: ' + heightValue + 'px;';
         this.homeMenuLinkContainer.nativeElement.style.width = window.innerWidth + 'px';
       } else {
+        this.whatsappLinkPrefix = this.desktopWhatsappLinkPrefix;
+        this.whatsapplinkText = this.desktopWhatsapplinkText;
+
         this.homeMenuLinkContainer.nativeElement.style = '';
         this.homeMenuLinkContainer.nativeElement.style.width = '';
       }

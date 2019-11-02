@@ -22,12 +22,31 @@ export class PersekutuanConnectComponent implements OnInit {
     { title: 'CONNECT', routerLink: '/connect/connect', isActive: false, isSubMenu: false }
   ];
 
+  whatsappLinkPrefix = '';
+  whatsapplinkText = '';
+
+  desktopWhatsappLinkPrefix = 'https://web.whatsapp.com/send?phone=';
+  desktopWhatsapplinkText = '&text=';
+
+  mobileWhatsappLinkPrefix = 'https://wa.me/';
+  mobileWhatsapplinkText = '/?text=';
+
   constructor(private route: ActivatedRoute, private _seoService: SeoService) { }
 
   ngOnInit() {
     this._seoService.updateTitle(this.route.snapshot.data['title']);
     this._seoService.updateOgUrl(this.route.snapshot.data['ogUrl']);
     this._seoService.updateDescription(this.route.snapshot.data['description']);
+
+    setTimeout(() => {
+      if (window.innerWidth <= 960) {
+        this.whatsappLinkPrefix = this.mobileWhatsappLinkPrefix;
+        this.whatsapplinkText = this.mobileWhatsapplinkText;
+      } else {
+        this.whatsappLinkPrefix = this.desktopWhatsappLinkPrefix;
+        this.whatsapplinkText = this.desktopWhatsapplinkText;
+      }
+    }, 500);
   }
 
   onOverlayMenuActivated(activated: boolean) {
