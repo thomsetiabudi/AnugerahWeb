@@ -1,0 +1,32 @@
+@import "material-icons/iconfont/material-icons.scss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind transform;
+
+.tracked {
+  letter-spacing: 3px;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/font/montserrat-regular-webfont.woff") format("woff"),
+    url("/font/montserrat-regular-webfont.woff2") format("woff2");
+}
+
+* {
+  @apply text-neutral-50;
+  font-family: "Montserrat";
+}
+
+.bg-primary {
+  background-color: rgba(19, 41, 75, 0.8);
+}
+.bg-hover:hover {
+  background-color: rgba(19, 41, 75, 0.8);
+}
+.text-2xs {
+  font-size: 0.75rem;
+  line-height: 0.75rem;
+}
