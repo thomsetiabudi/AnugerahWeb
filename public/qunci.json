@@ -1,0 +1,15 @@
+{
+    "realm": "www",
+    "auth-server-url": "https://qunci.id/auth/",
+    "ssl-required": "external",
+    "resource": "f93af41a-ecb4-46ae-bdea-492c85e347f6",
+    "public-client": true,
+    "verify-token-audience": true,
+    "use-resource-role-mappings": true,
+    "confidential-port": 0,
+    "icon": "door",
+    "text": "",
+    "bg-color": "#13294b",
+    "text-color": "#ffffff",
+    "group": "dc9abf73-4313-4e6c-ac54-fc70748b835d"
+}

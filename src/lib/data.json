@@ -1,0 +1,166 @@
+[
+    {
+        "pathname": "/kisah",
+        "children": [
+            {
+                "pathname": "/sejarah",
+                "content": {
+                    "header": "Sejarah",
+                    "side": "Kisah Kami",
+                    "md": "Pada awal tahun 1980, ada beberapa warga GKMI yang berasal dari Jawa Tengah dan telah sekian waktu lamanya berdomisili di Jakarta Barat merindukan adanya persekutuan di daerah Jakarta Barat. Pada tahun 1981 mulai dipikirkan untuk mengembangkan GKMI Cideng. Penyelenggaraan kebaktian mulai berjalan lancar dan jumlah jemaat pun terus bertambah bersamaan dengan makin banyaknya penduduk daerah yang bermigrasi ke Jakarta baik untuk bekerja maupun untuk studi. Di antara mereka terdapat beberapa jemaat GKMI dari Semarang, Kudus, Jepara, Pati, Welahan, Salatiga, Yogyakarta, dll. Mulailah dilaksanakan kegiatan-kegiatan gereja sebagaimana layaknya sebuah gereja yang sedang bertumbuh.<br/>Makin lama makin banyak professional muda dan mahasiswa yang menjadi jemaat GKMI Cideng, dan ini mau tak mau menebarkan jiwa dinamis yang senantiasa mau aktif, maju dan inovatif dalam perkembangan pelayanannya yang terbawa sampai sekarang. Kegiatan-kegiatan gerejawi lainnya seperti sekolah minggu, katekisasi, paduan suara, pendalaman Alkitab, baptisan, penyerahan anak, peneguhan pernikahan dan lain-lain, semua itu dilakukan dengan segala keterbatasan yang ada. Pada tahun 1985 tepatnya bulan Agustus, dibentuklah panitia pembangunan GKMI Cideng. Dan akhirnya tanggal 1 Maret 1988, GKMI Cideng didewasakan dengan nama GKMI Anugerah dan menjadi gereja ke-22 dari Sinode Muria."
+                }
+            },
+            {
+                "pathname": "/visi",
+                "content": {
+                    "header": "Visi",
+                    "side": "Kisah Kami",
+                    "md": "Menjadi Komunitas Murid Kristus yang bersaksi"
+                }
+            }
+        ]
+    },
+    {
+        "pathname": "/gembala",
+        "children": [
+            {
+                "pathname": "/pdt-febrian",
+                "content": {
+                    "header": "Pdt. Febrian Christianto H.",
+                    "side": "Kisah Kami",
+                    "md": "Sebagai Gembala Jemaat, saya rindu GKMI Anugerah menjadi gereja yang menyadari bahwa mempersiapkan generasi penerus adalah tugas penting, karena tugas ini menentukan masa depan. Ada ungkapan bahwa \"masa kini ditentukan oleh masa lalu, sedangkan masa kini menentukan masa depan\". Masa lalu tidak akan pernah bisa diubah, tetapi tindakan kita di masa kini menentukan masa depan kita. Itulah sebabnya keluarga, khususnya para orang tua bersama gereja, harus sungguh-sungguh mempersiapkan generasi penerusnya mulai dari sekarang. Hal ini menentukan masa depan. Pertama, masa depan generasi penerus itu sendiri. Kedua, masa depan gereja. Ketiga, masa depan bangsa ini.<br/>Siapakah pemimpin-pemimpin gereja di masa depan? Mereka adalah anak-anak kita yang saat ini masih ada di sekolah minggu, di kebaktian remaja dan pemuda. Sepuluh atau dua puluh tahun yang akan datang merekalah pemimpin-pemimpin gereja masa depan yang akan melanjutkan tongkat estafet kepemimpinan di gereja ini. Seperti kata pepatah: \"Gagal mempersiapkan diri sama dengan mempersiapkan diri untuk gagal.\" Untuk gereja berlaku hal yang sama; ketika gereja gagal mempersiapkan masa depan dirinya itu berarti gereja sedang mempersiapkan dirinya untuk gagal di masa depan. Mempersiapkan next generation (generasi mendatang), berarti mempersiapkan masa depan gereja dan gereja masa depan, Amin.",
+                    "contacts": {
+                        "instagram": "https://www.instagram.com/febrian_christianto",
+                        "whatsapp": "https://web.whatsapp.com/send?phone=628176904755"
+                    }
+                }
+            },
+            {
+                "pathname": "/pdt-prana",
+                "content": {
+                    "header": "Pdt. E. Pranawa S.",
+                    "side": "Kisah Kami",
+                    "md": "Saya menganalogikan gereja Tuhan sebagai sebuah rumah. Agar dapat berdiri kokoh, rumah harus dibangun di atas pondasi yang tepat dan kuat, tersusun dari banyak bata yang tahan terhadap tekanan, diikat menjadi satu oleh semen terbaik, tentu memiliki atap untuk menaungi.<br/>Demikian halnya gereja Tuhan akan berdiri kokoh apabila dibangun di atas dasar Yesus Kristus, tersusun dari jemaat yg kuat terhadap berbagai tekanan hidup dan diikat oleh kasih Kristus yang mempersatukan. Pemuridan menjadi proses penting yang harus dijalani dengan sikap hati penyembahan kepada Tuhan. Sebagai gembala, saya memimpin jemaat menjadi murid Kristus yang memiliki hati penyembah.",
+                    "contacts": {
+                        "instagram": "https://www.instagram.com/eliezer_setiawan",
+                        "whatsapp": "https://web.whatsapp.com/send?phone=628128443322"
+                    }
+                }
+            },
+            {
+                "pathname": "/pdm-hery",
+                "content": {
+                    "header": "Pdm. Hery Sugiyanto",
+                    "side": "Kisah Kami",
+                    "md": "",
+                    "contacts": {
+                        "instagram": "https://www.instagram.com/herysugiyanto28",
+                        "whatsapp": "https://web.whatsapp.com/send?phone=6281334046380"
+                    }
+                }
+            },
+            {
+                "pathname": "/pdm-dante",
+                "content": {
+                    "header": "Pdm. Daniel Talenta",
+                    "side": "Kisah Kami",
+                    "md": "",
+                    "contacts": {
+                        "instagram": "https://www.instagram.com/daniel_talenta",
+                        "whatsapp": "https://web.whatsapp.com/send?phone=6289651677355"
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "pathname": "/komunitas",
+        "content": {
+            "header": "Komunitas",
+            "side": "Komunitas",
+            "md": "Mari bergabung dengan komunitas kami!"
+        },
+        "children": [
+            {
+                "pathname": "/kids",
+                "content": {
+                    "header": "Kids",
+                    "side": "Komunitas",
+                    "md": "AnugerahKids merupakan wadah bagi anak-anak untuk memperoleh pengajaran yang benar tentang kebenaran Firman Allah, dengan Alkitab sebagai satu-satunya dasar pengajaran. Kami para guru melayani setiap anak dengan sepenuh hati dan dengan kerinduan yang besar, yaitu agar anak-anak yang hadir dapat berjumpa secara pribadi dengan Tuhan melalui setiap puji-pujian dan doa yang kami naikkan. Kami juga rindu mereka terus bertumbuh dan berbuah dalam kebenaran Firman Tuhan sehingga mereka membawa kemuliaan bagi nama Tuhan dan terus menjadi saksi-saksi Kristus dimanapun mereka berada, sehingga ujung bumi dapat mengenal Yesus Kristus melalui mereka."
+                }
+            },
+            {
+                "pathname": "/teens",
+                "content": {
+                    "header": "Teens",
+                    "side": "Komunitas",
+                    "md": "Anugerah Teens adalah sebuah komunitas anak muda remaja yang memiliki kerinduan untuk belajar menjadi pelaku Firman dan membagi kasih melalui ibadah & akitivitas-aktivitas, serta pendampingan kakak rohani yang berfokus pada keutuhan dan keunikan diri sendiri untuk menjadi pembawa damai dan memuliakan nama Allah.",
+                    "contacts": {
+                        "instagram": "https://www.instagram.com/anugerah_teens"
+                    }
+                }
+            },
+            {
+                "pathname": "/youth",
+                "content": {
+                    "header": "Youth",
+                    "side": "Komunitas",
+                    "md": "Anugerah Youth adalah komunitas Iman kaum muda yang menggumuli bersama tantangan zaman melalui Firman Tuhan. Komunitas ini dibentuk menjadi pelaku firman yang membawa damai dalam setiap tapak hidupnya di Indonesia dan dunia. Penerimaan diri, pembentukan karakter, dan pelayanan kasih untuk sesama adalah panggilan komunitas kami yang mengasihi kaum muda apa adanya.",
+                    "contacts": {
+                        "instagram": "https://www.instagram.com/anugerahyouth_"
+                    }
+                }
+            },
+            {
+                "pathname": "/dewasa-muda",
+                "content": {
+                    "header": "Dewasa Muda",
+                    "side": "Komunitas",
+                    "md": "Berfokus pada nilai FIRST, mengajak jemaat baik dalam keluarga ataupun dunia profesional untuk terus memegang teguh iman (Faith), berelasi dengan dekat (Intimacy), mengerti perannya (Roles), berdampak bagi lingkungan (Social) dan mensyukuri berkat Tuhan (Treasure) sehingga bisa terus berakar, bertumbuh dan berbuah bagi Kristus."
+                }
+            },
+            {
+                "pathname": "/excellent",
+                "content": {
+                    "header": "Excellent",
+                    "side": "Komunitas",
+                    "md": "Kami memiliki panggilan sebagai orang tua yang memiliki kerinduan dalam memberikan teladan bagi anak-anak kami dan generasi muda. Membawa keluarga kami untuk memiliki persekutuan yang erat dengan Tuhan serta membagikan kabar keselamatan dan kasih Kristus di lingkungan kerja dan sesama kami."
+                }
+            },
+            {
+                "pathname": "/premium",
+                "content": {
+                    "header": "Premium",
+                    "side": "Komunitas",
+                    "md": "Tujuan komunitas ini adalah untuk membina dan membangun iman kerohanian serta kebersamaan para lansia melalui persekutuan."
+                }
+            }
+        ]
+    },
+    {
+        "pathname": "/connect",
+        "content": {
+            "header": "Connect",
+            "side": "Connect",
+            "md": "CONNECT adalah komunitas kecil yang terdiri dari jemaat-jemaat GKMI Anugerah yang bersama saling mendukung untuk bertumbuh sebagai murid Kristus dan menjadi saksi Kristus"
+        },
+        "children": [
+            {
+                "pathname": "/youth",
+                "content": {
+                    "header": "Connect Youth",
+                    "side": "Connect",
+                    "md": "CONNECT diadakan dua minggu sekali. CONNECT merupakan suatu komunitas ilahi anak muda dimana sesama anggotanya bisa saling menguatkan / support dalam doa, pujian dan sharing."
+                }
+            },
+            {
+                "pathname": "/umum",
+                "content": {
+                    "header": "Connect Umum",
+                    "side": "Connect",
+                    "md": "Persekutuan tengah minggu yang diadakan di rumah jemaat yg tinggalnya dalam satu wilayah secara bergantian dengan tujuan utk sarana komunikasi, mengenal jemaat lebih dekat, sumber informasi, saling menguatkan, sharing pengalaman pribadi, saling mendoakan dan bersama sama belajar Firman Tuhan yg di disampaikan oleh anggota persekutuan dibawah supervisi Hamba Tuhannya."
+                }
+            }
+        ]
+    }
+]
